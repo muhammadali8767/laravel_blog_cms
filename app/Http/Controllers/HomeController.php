@@ -36,12 +36,12 @@ class HomeController extends Controller
     public function post($id)
     {
         $post = Post::where('id', $id)->first();
-        return view('post', compact('post'));
+        return view('front.post', compact('post'));
     }
 
     public function page($slug)
     {
         $page = StaticPage::where('slug', $slug)->first();
-        return view('page', compact('page'));
+        return view('front.page', compact('page'));
     }
 }
