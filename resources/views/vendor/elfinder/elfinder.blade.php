@@ -31,7 +31,7 @@
                     @if($locale)
                         lang: '{{ $locale }}', // locale
                     @endif
-                    customData: { 
+                    customData: {
                         _token: '{{ csrf_token() }}'
                     },
                     url : '{{ route("elfinder.connector") }}',  // connector URL
@@ -41,7 +41,7 @@
         </script>
     </head>
     <body>
-
+        <h1>{{ $dir }}</h1>
         <!-- Element where elFinder will be created (REQUIRED) -->
         <div id="elfinder"></div>
 

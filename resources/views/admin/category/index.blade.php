@@ -10,6 +10,12 @@
                 <div class="col-sm-6">
                     <h1 class="m-0">Все категории</h1>
                 </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}">Главная</a></li>
+                        <li class="breadcrumb-item active">Все категории</li>
+                    </ol>
+                </div>
             </div><!-- /.row -->
             @if (session('success'))
                 <div class="alert alert-success" role="alert">
@@ -43,19 +49,19 @@
                             @foreach ($categories as $category)
                                 <tr>
                                     <td>
-                                        {{ $category['id'] }}
+                                        {{ $category->id }}
                                     </td>
                                     <td>
-                                        {{ $category['title'] }}
+                                        {{ $category->title }}
                                     </td>
 
                                     <td class="project-actions text-right">
-                                        <a class="btn btn-info btn-sm" href="{{ route('category.edit', $category['id']) }}">
+                                        <a class="btn btn-info btn-sm" href="{{ route('category.edit', $category->id) }}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Редактировать
                                         </a>
-                                        <form action="{{ route('category.destroy', $category['id']) }}" method="POST"
+                                        <form action="{{ route('category.destroy', $category->id) }}" method="POST"
                                             style="display: inline-block">
                                             @csrf
                                             @method('DELETE')

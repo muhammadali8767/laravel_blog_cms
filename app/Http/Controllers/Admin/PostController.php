@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PostCreateRequest;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -18,9 +19,7 @@ class PostController extends Controller
     {
         $posts = Post::orderBy('created_at', 'DESC')->get();
 
-        return view('admin.post.index', [
-            'posts' => $posts
-        ]);
+        return view('admin.post.index', compact('posts'));
     }
 
     /**
@@ -32,9 +31,7 @@ class PostController extends Controller
     {
         $categories = Category::orderBy('created_at', 'DESC')->get();
 
-        return view('admin.post.create', [
-            'categories' => $categories
-        ]);
+        return view('admin.post.create', compact('categories'));
     }
 
     /**
@@ -43,16 +40,15 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostCreateRequest $request)
     {
-        $post = new Post();
-        $post->title = $request->title;
-        $post->img = $request->img;
-        $post->text = $request->text;
-        $post->cat_id = $request->cat_id;
-        $post->save();
+        $post = Post::create($request->except('_token'));
 
-        return redirect()->back()->withSuccess('Статья была успешно добавлена!');
+        if ($post->save()) {
+            return redirect()->back()->withSuccess('Статья была успешно добавлена!');
+        } else {
+            return redirect()->back()->withErrors('Статья не была добавлена!');
+        }
     }
 
     /**
@@ -76,10 +72,7 @@ class PostController extends Controller
     {
         $categories = Category::orderBy('created_at', 'DESC')->get();
 
-        return view('admin.post.edit', [
-            'categories' => $categories,
-            'post' => $post,
-        ]);
+        return view('admin.post.edit', compact('categories', 'post'));
     }
 
     /**
@@ -89,15 +82,15 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(PostCreateRequest $request, Post $post)
     {
-        $post->title = $request->title;
-        $post->img = $request->img;
-        $post->text = $request->text;
-        $post->cat_id = $request->cat_id;
-        $post->save();
+        $post->update($request->except('_token'));
 
-        return redirect()->back()->withSuccess('Статья была успешно обновлена!');
+        if ($post->save()) {
+            return redirect()->back()->withSuccess('Статья была успешно обновлена!');
+        } else {
+            return redirect()->back()->withErrors('Статья не была обновлена!');
+        }
     }
 
     /**
@@ -109,6 +102,7 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
+
         return redirect()->back()->withSuccess('Статья была успешно удалена!');
     }
 }

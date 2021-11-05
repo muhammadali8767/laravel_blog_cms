@@ -33,6 +33,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="?locale=uz" class="nav-link">uz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?locale=ru" class="nav-link">ru</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?locale=en" class="nav-link">en</a>
+                        </li>
 
                     </ul>
 
@@ -45,7 +54,7 @@
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-                            
+
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>

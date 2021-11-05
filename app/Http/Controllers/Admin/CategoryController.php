@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryCreateRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -17,9 +18,7 @@ class CategoryController extends Controller
     {
         $categories = Category::orderBy('created_at', 'desc')->get();
 
-        return view('admin.category.index', [
-            'categories' => $categories
-        ]);
+        return view('admin.category.index', compact('categories'));
     }
 
     /**
@@ -38,13 +37,15 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryCreateRequest $request)
     {
-        $new_category = new Category();
-        $new_category->title = $request->title;
-        $new_category->save();
+        $category = Category::create($request->except('_token'));
 
-        return redirect()->back()->withSuccess('Категория была успешно добавлена!');
+        if ($category->save()) {
+            return redirect()->back()->withSuccess('Категория была успешно добавлена!');
+        } else {
+            return redirect()->back()->withErrors('Категория не была добавлена!');
+        }
     }
 
     /**
@@ -66,9 +67,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('admin.category.edit', [
-            'category' => $category
-        ]);
+        return view('admin.category.edit', compact('category'));
     }
 
     /**
@@ -78,12 +77,15 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(CategoryCreateRequest $request, Category $category)
     {
-        $category->title = $request->title;
-        $category->save();
+        $category->update($request->except('_token'));
 
-        return redirect()->back()->withSuccess('Категория была успешно обновлена!');
+        if ($category->save()) {
+            return redirect()->back()->withSuccess('Категория была успешно обновлена!');
+        } else {
+            return redirect()->back()->withErrors('Категория не была обновлена!');
+        }
     }
 
     /**
@@ -95,6 +97,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
+
         return redirect()->back()->withSuccess('Категория была успешно удалена!');
     }
 }

@@ -18,6 +18,14 @@
             body {
                 font-family: 'Nunito';
             }
+            .btn-link {
+                border: none;
+                cursor: pointer;
+                background-color: transparent;
+                color: #4a5568;
+                font-size: .875rem;
+                text-decoration: underline;
+            }
         </style>
     </head>
     <body class="antialiased">
@@ -25,10 +33,17 @@
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                            @role('admin')
+                                <a href="{{ route('homeAdmin') }}" class="text-sm text-gray-700 underline">Admin</a>
+                            @else
+                                <a href="{{ route('home') }}" class="text-sm text-gray-700 underline">Home</a>
+                            @endrole
+                            <button class="btn btn-link" type="submit">Выход</button>
+                        </form>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                         @endif

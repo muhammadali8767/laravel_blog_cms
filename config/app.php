@@ -80,7 +80,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'uz',
+    'locales' => ['en','ru','uz'],
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +94,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'uz',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +178,8 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         Barryvdh\Elfinder\ElfinderServiceProvider::class,
 
+        App\Services\Localization\LocalizationServiceProvider::class,
+
     ],
 
     /*
@@ -228,6 +231,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'LocalizationService' => App\Services\Localization\LocalizationService::class,
 
     ],
 

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use App\Models\StaticPage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,23 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $pages = StaticPage::get();
+        foreach ($pages as $page) {
+            echo $page->id .' '. $page->title . '<br>';
+        }
+        dd();
         return view('home');
+    }
+
+    public function post($id)
+    {
+        $post = Post::where('id', $id)->first();
+        return view('post', compact('post'));
+    }
+
+    public function page($slug)
+    {
+        $page = StaticPage::where('slug', $slug)->first();
+        return view('page', compact('page'));
     }
 }
