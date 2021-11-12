@@ -36,6 +36,9 @@
                                     Название
                                 </th>
                                 <th>
+                                    Url
+                                </th>
+                                <th>
                                     Категория
                                 </th>
                                 <th>
@@ -49,25 +52,29 @@
                             @foreach ($posts as $post)
                                 <tr>
                                     <td>
-                                        {{ $post['id'] }}
+                                        {{ $post->id }}
                                     </td>
                                     <td>
-                                        {{ $post['title'] }}
+                                        {{ $post->title }}
                                     </td>
                                     <td>
-                                        {{ $post->category['title'] }}
+                                        <a href="{{ 'http://zina.test/'.app()->getLocale().'/post' . '/' . $post->slug }}">
+                                            {{ 'http://zina.test/'.app()->getLocale().'/post' . '/' . $post->slug }}
+                                        </a>
                                     </td>
                                     <td>
-                                        {{ $post['created_at'] }}
+                                        {{ $post->category->title }}
                                     </td>
-
+                                    <td>
+                                        {{ $post->created_at }}
+                                    </td>
                                     <td class="project-actions text-right">
-                                        <a class="btn btn-info btn-sm" href="{{ route('post.edit', $post['id']) }}">
+                                        <a class="btn btn-info btn-sm" href="{{ route('post.edit', $post->id) }}">
                                             <i class="fas fa-pencil-alt">
                                             </i>
                                             Редактировать
                                         </a>
-                                        <form action="{{ route('post.destroy', $post['id']) }}" method="POST"
+                                        <form action="{{ route('post.destroy', $post->id) }}" method="POST"
                                             style="display: inline-block">
                                             @csrf
                                             @method('DELETE')

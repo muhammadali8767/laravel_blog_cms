@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Observers\CategoryObserver;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,6 +10,17 @@ class Category extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    /**
+     * The "booting" method of the model.
+     *
+     * @return void
+     */
+    protected static function boot()
+    {
+        parent::boot();
+        self::observe(CategoryObserver::class);
+    }
 
     public function getTitleAttribute($title){
         switch (app()->getLocale()) {

@@ -13,6 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <img src="{{ $post->img }}" height="300px">
 
                     {!! $post->text !!}
                 </div>

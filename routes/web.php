@@ -21,13 +21,30 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', function () {return redirect()->route('home_locale');});
+
+// Route::get('/', function () {return redirect()->route('home_locale');});
 Route::prefix(LocalizationService::locale())->middleware(['setLocale'])->group(function () {
 
-    Route::get('post/{id}', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
+    Route::namespace('App\Http\Controllers')->group(function () {
+        Route::get('/', 'FrontController@index')->name('main');
+        Route::get('/about', 'FrontController@about')->name('about');
+        Route::get('/services', 'FrontController@services')->name('services');
+        Route::get('/project', 'FrontController@project')->name('project');
+        Route::get('/blog', 'FrontController@blog')->name('blog');
+        Route::get('/contact', 'FrontController@contact')->name('contact');
+        Route::get('/elements', 'FrontController@elements')->name('elements');
+        Route::get('/project-details', 'FrontController@projectDetails')->name('project-details');
+        Route::get('/single-blog/{id}', 'FrontController@singleBlog')->name('single-blog');
+
+    });
+
+
+
+
+    Route::get('post/{slug}', [App\Http\Controllers\HomeController::class, 'post'])->name('post');
 
     Route::get('page/{slug}', [App\Http\Controllers\HomeController::class, 'page'])->name('page');
-    Route::get('/', function () {return view('welcome');})->name('home_locale');
+    // Route::get('/', function () {return view('welcome');})->name('home_locale');
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::middleware(['role:admin'])->prefix('admin')->group(function () {
@@ -41,3 +58,11 @@ Route::prefix(LocalizationService::locale())->middleware(['setLocale'])->group(f
     });
 });
 
+
+
+//    Route::get('/home', 'HomeController@index')->name('home');
+//    Route::get('/article', 'ArticleController@index')->name('article');
+//    Route::get('/article/store', 'ArticleController@store')->name('store.article');
+//    Route::get('/summernote-editor-upload', 'EmployeeController@index');
+//    Route::post('file-upload', 'EmployeeController@fileUpload');
+    // Route::post('ckeditor/image_upload', 'PostController@upload')->name('upload');

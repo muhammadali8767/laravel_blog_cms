@@ -50,33 +50,72 @@
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Sarlavha O'zbekcha</label>
                                             <input type="text" name="title_uz" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Введите название статьи" required>
+                                                placeholder="Введите название статьи" required value="{{ $post->title_uz }}">
+                                                <div class="invalid-feedback">
+                                                    Please fill a valid data.
+                                                </div>
+                                            </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Qisqacha matn O'zbekcha</label>
+                                            <textarea name="short_uz" rows="5" class="form-control">{{ $post->short_uz }}</textarea>
+                                            <div class="invalid-feedback">
+                                                Please fill a valid data.
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Matn O'zbekcha</label>
                                             <textarea name="text_uz" class="editor">{{ $post->text_uz }}</textarea>
+                                            <div class="invalid-feedback">
+                                                Please fill a valid data.
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Название Русский</label>
                                             <input type="text" name="title_ru" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Введите название статьи" required>
+                                                placeholder="Введите название статьи" value="{{ $post->title_ru }}">
+                                                <div class="invalid-feedback">
+                                                    Please fill a valid data.
+                                                </div>
+                                            </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Кароткий текст Русский</label>
+                                            <textarea name="short_ru" rows="5" class="form-control">{{ $post->short_ru }}</textarea>
+                                            <div class="invalid-feedback">
+                                                Please fill a valid data.
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Текст Русский</label>
                                             <textarea name="text_ru" class="editor">{{ $post->text_ru }}</textarea>
+                                            <div class="invalid-feedback">
+                                                Please fill a valid data.
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Title English</label>
                                             <input type="text" name="title_en" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Введите название статьи" required>
+                                                placeholder="Введите название статьи" value="{{ $post->title_en }}">
+                                                <div class="invalid-feedback">
+                                                    Please fill a valid data.
+                                                </div>
+                                            </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Short content English</label>
+                                            <textarea name="short_en" rows="5" class="form-control">{{ $post->short_en }}</textarea>
+                                            <div class="invalid-feedback">
+                                                Please fill a valid data.
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Content English</label>
-                                    <textarea name="text_en" class="editor">{{ $post->text_en }}</textarea>
+                                            <textarea name="text_en" class="editor">{{ $post->text_en }}</textarea>
+                                            <div class="invalid-feedback">
+                                                Please fill a valid data.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -84,13 +123,16 @@
                                     <!-- select -->
                                     <div class="form-group">
                                         <label>Выберите категорию</label>
-                                        <select name="cat_id" class="form-control" required>
+                                        <select name="category_id" class="form-control" required>
                                             @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}" @if ($category->id == $post->cat_id) selected
+                                                <option value="{{ $category->id }}" @if ($category->id == $post->category_id) selected
                                             @endif>{{ $category->title }}
                                             </option>
                                             @endforeach
                                         </select>
+                                        <div class="invalid-feedback">
+                                            Please fill a valid data.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -99,6 +141,9 @@
                                         style="display: block; width: 300px">
                                     <input type="text" value="{{ $post->img }}" name="img" class="form-control"
                                         id="feature_image" name="feature_image" value="" readonly>
+                                    <div class="invalid-feedback">
+                                        Please fill a valid data.
+                                    </div>
                                     <a href="" class="popup_selector" data-inputid="feature_image">Выбрать изображение</a>
                                 </div>
                             </div>
@@ -108,6 +153,27 @@
                                 <button type="submit" class="btn btn-primary">Сохранить</button>
                             </div>
                         </form>
+
+                        <script>
+                            // Example starter JavaScript for disabling form submissions if there are invalid fields
+                            (function() {
+                                'use strict';
+                                window.addEventListener('load', function() {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function(form) {
+                                    form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                    }, false);
+                                });
+                                }, false);
+                            })();
+                        </script>
                     </div>
                 </div>
             </div>

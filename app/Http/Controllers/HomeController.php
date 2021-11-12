@@ -13,10 +13,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -33,9 +33,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function post($id)
+    public function post($slug)
     {
-        $post = Post::where('id', $id)->first();
+        $post = Post::where('slug', $slug)->first();
         return view('front.post', compact('post'));
     }
 

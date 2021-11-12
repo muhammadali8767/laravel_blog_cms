@@ -13,18 +13,16 @@ class StaticPageObserver
      */
     public function creating(StaticPage $page)
     {
-        $this->setSlug($page);
-        $this->setTitle($page);
         $this->setUser($page);
     }
 
     /**
-     * Handle the StaticPage "updating" event.
+     * Handle the StaticPage "saving" event.
      *
      * @param  \App\Models\StaticPage  $page
      * @return void
      */
-    public function updating(StaticPage $page)
+    public function saving(StaticPage $page)
     {
         $this->setSlug($page);
         $this->setTitle($page);
@@ -39,10 +37,21 @@ class StaticPageObserver
 
     private function setTitle(StaticPage $page)
     {
-        if ($page->isClean('title_ru')) {
+        if (empty($page->title_ru)) {
             $page->title_ru = $page->title_uz;
         }
 
+        if (empty($page->text_ru)) {
+            $page->text_ru = $page->text_uz;
+        }
+
+        if (empty($page->title_en)) {
+            $page->title_en = $page->title_uz;
+        }
+
+        if (empty($page->text_en)) {
+            $page->text_en = $page->text_uz;
+        }
         if ($page->isClean('title_en')) {
             $page->title_en = $page->title_uz;
         }

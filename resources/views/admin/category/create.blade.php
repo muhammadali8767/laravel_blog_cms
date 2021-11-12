@@ -40,16 +40,16 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Nomi O'zbekcha</label>
+                                    <label for="exampleInputEmail1">Nomi O'zbekcha *</label>
                                     <input type="text" name="title_uz" class="form-control" id="exampleInputEmail1" placeholder="Kategoriya nomini kiriting" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Название Русский</label>
-                                    <input type="text" name="title_ru" class="form-control" id="exampleInputEmail1" placeholder="Введите название категории" required>
+                                    <input type="text" name="title_ru" class="form-control" id="exampleInputEmail1" placeholder="Введите название категории">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Name English</label>
-                                    <input type="text" name="title_en" class="form-control" id="exampleInputEmail1" placeholder="Enter category name" required>
+                                    <input type="text" name="title_en" class="form-control" id="exampleInputEmail1" placeholder="Enter category name">
                                 </div>
                             </div>
                             <!-- /.card-body -->

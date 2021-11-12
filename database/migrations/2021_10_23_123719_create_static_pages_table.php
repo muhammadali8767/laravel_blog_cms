@@ -15,14 +15,18 @@ class CreateStaticPagesTable extends Migration
     {
         Schema::create('static_pages', function (Blueprint $table) {
             $table->id();
+
             $table->string('title_uz');
             $table->string('title_ru')->nullable();
             $table->string('title_en')->nullable();
+
             $table->text('text_uz');
             $table->text('text_ru')->nullable();
             $table->text('text_en')->nullable();
+
             $table->string('slug');
-            $table->bigInteger('user_id')->unsigned();
+
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

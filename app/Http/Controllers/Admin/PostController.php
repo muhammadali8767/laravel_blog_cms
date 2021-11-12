@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PostCreateRequest;
 use App\Models\Category;
 use App\Models\Post;
+use App\Observers\PostObserver;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -84,14 +85,16 @@ class PostController extends Controller
      */
     public function update(PostCreateRequest $request, Post $post)
     {
+        // dd($post->getObservableEvents());
         $post->update($request->except('_token'));
 
         if ($post->save()) {
-            return redirect()->back()->withSuccess('Статья была успешно обновлена!');
+            return redirect()->back()->withSuccess('Страница была успешно обновлена!');
         } else {
-            return redirect()->back()->withErrors('Статья не была обновлена!');
+            return redirect()->back()->withErrors('Страница не была обновлена!');
         }
     }
+
 
     /**
      * Remove the specified resource from storage.
