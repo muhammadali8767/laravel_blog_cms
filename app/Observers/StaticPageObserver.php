@@ -52,9 +52,6 @@ class StaticPageObserver
         if (empty($page->text_en)) {
             $page->text_en = $page->text_uz;
         }
-        if ($page->isClean('title_en')) {
-            $page->title_en = $page->title_uz;
-        }
     }
 
     private function setUser(StaticPage $page)
