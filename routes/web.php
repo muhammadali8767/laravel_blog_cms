@@ -37,17 +37,9 @@ Route::namespace('App\Http\Controllers')
     ->prefix(LocalizationService::locale()) // uz ru en
     ->middleware(['setLocale'])
     ->group(function () {
-        Route::get('', 'FrontController@index')->name('main');
-        Route::get('about', 'FrontController@about')->name('about');
-        Route::get('services', 'FrontController@services')->name('services');
-        Route::get('project', 'FrontController@project')->name('project');
-        Route::get('blog', 'FrontController@blog')->name('blog');
-        Route::get('contact', 'FrontController@contact')->name('contact');
-        Route::get('elements', 'FrontController@elements')->name('elements');
-        Route::get('project-details', 'FrontController@projectDetails')->name('project-details');
-        Route::get('single-blog/{id}', 'FrontController@singleBlog')->name('single-blog');
+        // Route::get('', 'FrontController@index')->name('main');
 
-        Route::get('home', 'HomeController@index')->name('home');
+        Route::get('', 'HomeController@index')->name('home');
         Route::get('page/{slug}', 'HomeController@page')->name('page');
         Route::get('/{slug}', 'HomeController@category')->name('category');
         // Route::get('post/{slug}', 'HomeController@post')->name('post'); // route('post', $post->slug)
