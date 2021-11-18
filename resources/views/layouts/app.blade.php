@@ -36,20 +36,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a href="?locale=uz" class="nav-link">uz</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="?locale=ru" class="nav-link">ru</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="?locale=en" class="nav-link">en</a>
-                        </li>
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ app()->getLocale() }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a href="?locale=uz" class="dropdown-item">O'zbekcha</a>
+                                <a href="?locale=ru" class="dropdown-item">Русский</a>
+                                <a href="?locale=en" class="dropdown-item">English</a>
+                            </div>
+                        </li>
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -74,6 +77,9 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('homeAdmin') }}">
+                                        {{ __('Admin Dashboard') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

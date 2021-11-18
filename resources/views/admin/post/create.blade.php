@@ -54,17 +54,28 @@
                                     <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Sarlavha O'zbekcha</label>
-                                            <input type="text" name="title_uz" class="form-control" id="exampleInputEmail1" required>
+                                            <input type="text" name="title_uz" class="form-control @error('password') is-invalid @enderror" id="exampleInputEmail1" required>
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('title_uz')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Qisqacha matn O'zbekcha</label>
-                                            <textarea name="short_uz" rows="5" class="form-control" required></textarea>
+                                            <textarea name="short_uz" rows="5" class="form-control @error('password') is-invalid @enderror" required></textarea>
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('short_uz')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Matn O'zbekcha</label>
@@ -72,22 +83,37 @@
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('text_uz')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Название Русский</label>
-                                            <input type="text" name="title_ru" class="form-control" id="exampleInputEmail1">
+                                            <input type="text" name="title_ru" class="form-control @error('password') is-invalid @enderror" id="exampleInputEmail1">
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('title_ru')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Кароткий текст Русский</label>
-                                            <textarea name="short_ru" rows="5" class="form-control"></textarea>
+                                            <textarea name="short_ru" rows="5" class="form-control @error('password') is-invalid @enderror"></textarea>
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('short_ru')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Текст Русский</label>
@@ -95,22 +121,37 @@
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('text_ru')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="custom-tabs-four-messages" role="tabpanel" aria-labelledby="custom-tabs-four-messages-tab">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Title English</label>
-                                            <input type="text" name="title_en" class="form-control" id="exampleInputEmail1">
+                                            <input type="text" name="title_en" class="form-control @error('password') is-invalid @enderror" id="exampleInputEmail1">
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('title_en')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Short content English</label>
-                                            <textarea name="short_en" rows="5" class="form-control"></textarea>
+                                            <textarea name="short_en" rows="5" class="form-control @error('password') is-invalid @enderror"></textarea>
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('short_en')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Content English</label>
@@ -118,6 +159,11 @@
                                             <div class="invalid-feedback">
                                                 Please fill a valid data.
                                             </div>
+                                            @error('text_en')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -125,7 +171,7 @@
                                     <!-- select -->
                                     <div class="form-group">
                                         <label>Выберите категорию</label>
-                                        <select name="category_id" class="form-control" required>
+                                        <select name="category_id" class="form-control @error('password') is-invalid @enderror" required>
                                             @foreach ($categories as $category)
                                                 <option value="{{ $category['id'] }}">{{ $category['title'] }}</option>
                                             @endforeach
@@ -133,21 +179,30 @@
                                         <div class="invalid-feedback">
                                             Please fill a valid data.
                                         </div>
-                                    </div>
+                                        @error('category_id')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                            </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="feature_image">Изображение статьи</label>
                                     <img src="" alt="" class="img-uploaded" style="display: block; width: 300px">
-                                    <input type="text" name="img" class="form-control" id="feature_image"
+                                    <input type="text" name="img" class="form-control @error('password') is-invalid @enderror" id="feature_image"
                                         name="feature_image" value="" readonly>
                                     <div class="invalid-feedback">
                                         Please fill a valid data.
                                     </div>
+                                    @error('img')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+
                                     <a href="" class="popup_selector" data-inputid="feature_image">Выбрать изображение</a>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
-
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Добавить</button>
                             </div>

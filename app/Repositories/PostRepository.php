@@ -33,6 +33,39 @@ class PostRepository extends CoreRepository {
     }
 
     /**
+     * Get model for editing in admin panel
+     *
+     * @param int $id
+     *
+     * @return Model
+     */
+    public function getAllWithCategory($category_slug, $perPage = null) {
+        $columns = implode(', ', [
+            'id',
+            'title_uz',
+            'title_ru',
+            'title_en',
+            'img',
+            'text_uz',
+            'text_ru',
+            'text_en',
+            'DAY(created_at) AS day',
+            'CAST(MONTHNAME(created_at) AS CHAR(3)) AS month',
+            // 'user_id',
+            'category_id'
+        ]);
+
+        $result = $this->startConditions()
+            ->selectRaw($columns)
+            ->orderBy('id', 'DESC')
+            ->with([
+                'category:id,title_uz',
+                // 'user:id,name'
+            ])
+            ->paginate($perPage);
+    }
+
+    /**
      * @param int $perPage
      *
      * @return Illuminate\Contracts\Pagination\Paginator

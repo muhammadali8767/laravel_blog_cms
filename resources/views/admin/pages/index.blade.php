@@ -56,32 +56,30 @@
                             @foreach ($pages as $page)
                                 <tr>
                                     <td>
-                                        {{ $page['id'] }}
+                                        {{ $page->id }}
                                     </td>
                                     <td>
-                                        {{ $page['title'] }}
+                                        {{ $page->title }}
                                     </td>
                                     <td>
-                                        {{ $page['slug'] }}
+                                        <a href="{{ route('page', $page->slug) }}">
+                                            {{ route('page', $page->slug) }}
+                                        </a>
                                     </td>
                                     <td>
-                                        {{ $page['created_at'] }}
+                                        {{ $page->created_at }}
                                     </td>
 
                                     <td class="project-actions text-right">
-                                        <a class="btn btn-info btn-sm" href="{{ route('pages.edit', $page['id']) }}">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Редактировать
+                                        <a class="btn btn-info btn-sm" href="{{ route('pages.edit', $page->id) }}">
+                                            <i class="fas fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('pages.destroy', $page['id']) }}" method="POST"
+                                        <form action="{{ route('pages.destroy', $page->id) }}" method="POST"
                                             style="display: inline-block">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm delete-btn">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Удалить
+                                                <i class="fas fa-trash"></i>
                                             </button>
                                         </form>
                                     </td>

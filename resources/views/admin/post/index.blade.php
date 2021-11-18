@@ -58,8 +58,8 @@
                                         {{ $post->title }}
                                     </td>
                                     <td>
-                                        <a href="{{ 'http://zina.test/'.app()->getLocale().'/post' . '/' . $post->slug }}">
-                                            {{ 'http://zina.test/'.app()->getLocale().'/post' . '/' . $post->slug }}
+                                        <a href="{{ route('category_post', [$post->category->slug, $post->slug]) }}">
+                                            {{ route('category_post', [$post->category->slug, $post->slug]) }}
                                         </a>
                                     </td>
                                     <td>
@@ -70,18 +70,14 @@
                                     </td>
                                     <td class="project-actions text-right">
                                         <a class="btn btn-info btn-sm" href="{{ route('post.edit', $post->id) }}">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Редактировать
+                                            <i class="fas fa-pencil-alt"></i>
                                         </a>
                                         <form action="{{ route('post.destroy', $post->id) }}" method="POST"
                                             style="display: inline-block">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm delete-btn">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Удалить
+                                                <i class="fas fa-trash"></i>
                                             </button>
                                         </form>
                                     </td>

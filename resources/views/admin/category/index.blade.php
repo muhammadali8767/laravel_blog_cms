@@ -41,6 +41,9 @@
                                 <th>
                                     Название
                                 </th>
+                                <th>
+                                    Url
+                                </th>
                                 <th style="width: 30%">
                                 </th>
                             </tr>
@@ -55,20 +58,21 @@
                                         {{ $category->title }}
                                     </td>
 
+                                    <td>
+                                        <a href="{{ route('category', $category->slug) }}">
+                                            {{ route('category', $category->slug) }}
+                                        </a>
+                                    </td>
                                     <td class="project-actions text-right">
                                         <a class="btn btn-info btn-sm" href="{{ route('category.edit', $category->id) }}">
-                                            <i class="fas fa-pencil-alt">
-                                            </i>
-                                            Редактировать
+                                            <i class="fas fa-pencil-alt"></i>
                                         </a>
                                         <form action="{{ route('category.destroy', $category->id) }}" method="POST"
                                             style="display: inline-block">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm delete-btn">
-                                                <i class="fas fa-trash">
-                                                </i>
-                                                Удалить
+                                                <i class="fas fa-trash"></i>
                                             </button>
                                         </form>
                                     </td>

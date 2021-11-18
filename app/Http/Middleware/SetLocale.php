@@ -22,6 +22,7 @@ class SetLocale
         if ($request->locale) {
             array_shift($segments);
             $redirect = $request->locale .'/'. implode('/', $segments);
+            // app()->setLocale($request->locale);
             return redirect()->to($redirect);
         }
 
@@ -35,6 +36,7 @@ class SetLocale
                 $locale = config('app.locale');
                 session(['locale' => $locale]);
             }
+            // app()->setLocale($locale);
             $redirect = $locale .'/'. implode('/', $segments);
             return redirect()->to($redirect);
         }
