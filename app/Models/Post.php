@@ -44,6 +44,21 @@ class Post extends Model
         return $title;
     }
 
+    public function getShortAttribute($short){
+        switch (app()->getLocale()) {
+            case 'en':
+                $short = $this->short_en;
+                break;
+            case 'ru':
+                $short = $this->short_ru;
+                break;
+            default:
+                $short = $this->short_uz;
+                break;
+        }
+        return $short;
+    }
+
     public function getTextAttribute($text){
         switch (app()->getLocale()) {
             case 'en':

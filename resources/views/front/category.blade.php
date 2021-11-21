@@ -20,7 +20,7 @@
 
                     <div class="card-body">
 
-                        {!! $post->text !!}
+                        {!! $post->short !!}
                     </div>
                 </div>
 
