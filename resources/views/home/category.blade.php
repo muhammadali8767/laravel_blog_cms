@@ -8,7 +8,7 @@
                 {{ session('status') }}
             </div>
         @endif
-        <h1>Posts of category {{$category->title}}</h1>
+        <h1>Posts of category {{$posts->first()->category->title}}</h1>
         <div class="col-md-12">
             @foreach ($posts as $post)
                 <div class="card m-1">

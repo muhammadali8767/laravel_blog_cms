@@ -19,6 +19,7 @@ class SetLocale
     {
         $segments = $request->segments();
 
+        // if isset in request locale then set locale to request locale
         if ($request->locale) {
             array_shift($segments);
             $redirect = $request->locale .'/'. implode('/', $segments);

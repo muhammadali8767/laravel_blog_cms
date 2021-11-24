@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\DB;
 
 class PostRepository extends CoreRepository {
 
+    private $category_slug;
     /**
      * @retutn string
      */
@@ -40,29 +41,16 @@ class PostRepository extends CoreRepository {
      * @return Model
      */
     public function getAllWithCategory($category_slug, $perPage = null) {
-        $columns = implode(', ', [
-            'id',
-            'title_uz',
-            'title_ru',
-            'title_en',
-            'img',
-            'text_uz',
-            'text_ru',
-            'text_en',
-            'DAY(created_at) AS day',
-            'CAST(MONTHNAME(created_at) AS CHAR(3)) AS month',
-            // 'user_id',
-            'category_id'
-        ]);
-
+        $this->category_slug = $category_slug;
         $result = $this->startConditions()
-            ->selectRaw($columns)
             ->orderBy('id', 'DESC')
-            ->with([
-                'category:id,title_uz',
-                // 'user:id,name'
-            ])
+            ->with('category')
+            ->whereHas('category', function($query){
+                $query->where('slug', $this->category_slug);
+            })
             ->paginate($perPage);
+
+        return $result;
     }
 
     /**

@@ -31,35 +31,36 @@ class HomeController extends Controller
         $posts = Post::get();
         $pages = StaticPage::get();
 
-        return view('home', compact('categories', 'posts', 'pages'));
+        return view('home.home', compact('categories', 'posts', 'pages'));
     }
 
     public function post($slug)
     {
         $post = Post::where('slug', $slug)->firstOrFail();
 
-        return view('front.post', compact('post'));
+        return view('home.post', compact('post'));
     }
 
     public function page($slug)
     {
         $page = StaticPage::where('slug', $slug)->firstOrFail();
 
-        return view('front.page', compact('page'));
+        return view('home.page', compact('page'));
     }
 
-    public function category($slug)
+    public function category($category_slug)
     {
-        $category = Category::where('slug', $slug)->firstOrFail();
-        $posts = Post::with('category')->where('category_id', $category->id)->get();
+        $posts = app(PostRepository::class)->getAllWithCategory($category_slug, 5);
 
-        return view('front.category', compact('posts', 'category'));
+        return view('home.category', compact('posts'));
     }
     public function category_post($category_slug, $slug)
     {
+        // $posts = app(PostRepository::class)->getAllWithCategory($category_slug, 5);
+        // dd($posts);
         $category = Category::where('slug', $category_slug)->firstOrFail();
         $post = Post::where('slug', $slug)->where('category_id', $category->id)->firstOrFail();
 
-        return view('front.post', compact('post'));
+        return view('home.post', compact('post'));
     }
 }
