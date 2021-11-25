@@ -81,18 +81,13 @@
                         <li class="nav-item">
                             <a href="{{ route('homeAdmin') }}" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Главная
-                                </p>
+                                <p>Главная</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-align-left"></i>
-                                <p>
-                                    Категории
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Категории<i class="right fas fa-angle-left"></i></p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -110,10 +105,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-pen-alt"></i>
-                                <p>
-                                    Блог
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Блог<i class="right fas fa-angle-left"></i></p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -129,35 +121,39 @@
                             </ul>
                         </li>
 
-                        {{-- <li class="nav-item">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-icons"></i>
-                                <p>
-                                    Медиа
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Медиа<i class="right fas fa-angle-left"></i></p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="{{ route('post.index') }}" class="nav-link">
-                                        <p>Все медиафайлы</p>
+                                        <p>Все фотографии</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('post.create') }}" class="nav-link">
-                                        <p>Добавить медиафайл</p>
+                                        <p>Добавить фото</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('post.index') }}" class="nav-link">
+                                        <p>Все видео</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('post.create') }}" class="nav-link">
+                                        <p>Добавить видео</p>
                                     </a>
                                 </li>
                             </ul>
-                        </li> --}}
+                        </li>
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    Страницы
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <p>Страницы<i class="right fas fa-angle-left"></i></p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -174,10 +170,8 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>                                <p>
-                                    Ползователи
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Ползователи<i class="right fas fa-angle-left"></i></p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -191,6 +185,13 @@
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('users.index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Заявки</p>
+                            </a>
                         </li>
 
                     </ul>

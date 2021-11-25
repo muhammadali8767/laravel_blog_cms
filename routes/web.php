@@ -29,7 +29,7 @@ Route::namespace('App\Http\Controllers\Admin')
         Route::resource('post', 'PostController')->except('show');
         Route::resource('pages', 'StaticPageController')->except('show');
         Route::resource('users', 'UserController');
-        Route::resource('contact', 'ContactController')->except('create, update');
+        Route::resource('contact', 'ContactController')->except('create, store, edit');
         Route::post('users/change-password/{user}', 'UserController@change_password')->name('change-password');
     }
 );

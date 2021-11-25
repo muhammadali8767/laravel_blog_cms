@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContacCreateRequest;
+use App\Models\Contact;
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
 
@@ -72,10 +74,15 @@ class FrontController extends Controller
         return view('front.contact');
     }
 
-    public function post_contact(Request $request)
+    public function post_contact(ContacCreateRequest $request)
     {
-        dd($request->except('_token'));
-        return view('front.post_contact');
+        $contact = Contact::create($request->except('_token'));
+
+        if ($contact->save()) {
+            return redirect()->back()->withSuccess('Ваша заявка успешно сохранена!');
+        } else {
+            return redirect()->back()->withErrors('Ваша заявка не сохранена!');
+        }
     }
 
 

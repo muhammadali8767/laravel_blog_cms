@@ -19,7 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('phone');
             $table->string('location');
             $table->string('text');
-            $table->boolean('seen');
+            $table->boolean('seen')->default(null);
             $table->timestamps();
         });
     }

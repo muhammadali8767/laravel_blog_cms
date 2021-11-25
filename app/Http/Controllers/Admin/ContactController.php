@@ -16,27 +16,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        // $categories = Contact::orderBy('created_at', 'desc')->get();
+        $contacts = Contact::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('admin.contact.index', compact('categories'));
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(ContacCreateRequest $request)
-    {
-        dd($request->except('_token'));
-        $contact = Contact::create($request->except('_token'));
-
-        if ($contact->save()) {
-            return redirect()->back()->withSuccess('Ваша заявка успешно сохранена!');
-        } else {
-            return redirect()->back()->withErrors('Ваша заявка не сохранена!');
-        }
+        return view('admin.contact.index', compact('contacts'));
     }
 
     /**
@@ -47,35 +29,15 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        //
-    }
+        $contact->update(['seen' => true]);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Contact $contact)
-    {
-        return view('admin.contact.edit', compact('contact'));
-    }
+        $contact->save();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
-    public function update(ContacCreateRequest $request, Contact $contact)
-    {
-        $contact->update($request->except('_token'));
-
+        dd($contact);
         if ($contact->save()) {
-            return redirect()->back()->withSuccess('Категория была успешно обновлена!');
+            return view('admin.contact.show', compact('contact'));
         } else {
-            return redirect()->back()->withErrors('Категория не была обновлена!');
+            return redirect()->back()->withErrors('Заявка не была обновлена!');
         }
     }
 
@@ -89,5 +51,5 @@ class ContactController extends Controller
     {
         $contact->delete();
 
-        return redirect()->back()->withSuccess('Категория была успешно удалена!');
+        return redirect()->back()->withSuccess('Заявка была успешно удалена!');
     }}
