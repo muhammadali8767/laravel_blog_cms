@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Services\Localization\LocalizationService;
+use Spatie\Permission\Contracts\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::namespace('App\Http\Controllers\Admin')
         Route::resource('post', 'PostController')->except('show');
         Route::resource('pages', 'StaticPageController')->except('show');
         Route::resource('users', 'UserController');
+        Route::resource('contact', 'ContactController')->except('create, update');
         Route::post('users/change-password/{user}', 'UserController@change_password')->name('change-password');
     }
 );
@@ -53,9 +55,6 @@ Route::namespace('App\Http\Controllers')
         Route::get('news', 'FrontController@news')->name('news');
         Route::get('multimedia', 'FrontController@multimedia')->name('multimedia');
         Route::get('contact', 'FrontController@contact')->name('contact');
-        Route::post('contact', 'FrontController@post_contact')->name('post_contact');
-
-
 
         Route::get('home', 'HomeController@index')->name('home');
         Route::get('page/{slug}', 'HomeController@page')->name('page');

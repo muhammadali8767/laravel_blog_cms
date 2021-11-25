@@ -24,7 +24,9 @@ class CategoryCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title_uz'=> 'required',
+            'title_uz'=> 'required|string|max:255',
+            'title_ru'=> 'string|max:255',
+            'title_en'=> 'string|max:255',
         ];
     }
 }

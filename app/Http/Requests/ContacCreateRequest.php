@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StaticPageCreateRequest extends FormRequest
+class ContacCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,13 +24,10 @@ class StaticPageCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title_uz'=> 'required|string|max:255',
-            'title_ru'=> 'string|max:255',
-            'title_en'=> 'string|max:255',
-
-            'text_uz' => 'required|string|max:255',
-            'text_ru' => 'string|max:255',
-            'text_en' => 'string|max:255',
+            'name'=> 'required|string|min:3|max:255',
+            'phone' => 'required|string|min:3|max:255',
+            'location' => 'required|string|min:3|max:255',
+            'text' => 'required|string|min:3|max:1000',
         ];
     }
 }

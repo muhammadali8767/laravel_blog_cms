@@ -24,10 +24,20 @@ class PostCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title_uz'=> 'required',
-            'text_uz' => 'required',
-            'img' => 'required',
-            'category_id' => 'required'
+            'title_uz'=> 'required|string|max:255',
+            'title_ru'=> 'string|max:255',
+            'title_en'=> 'string|max:255',
+
+            'short_uz' => 'required|string|max:255',
+            'short_ru' => 'string|max:255',
+            'short_en' => 'string|max:255',
+
+            'text_uz' => 'required|string|max:255',
+            'text_ru' => 'string|max:255',
+            'text_en' => 'string|max:255',
+
+            'img' => 'required|image',
+            'category_id' => 'required|exists:categoties,id'
         ];
     }
 }

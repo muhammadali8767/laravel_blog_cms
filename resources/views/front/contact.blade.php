@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-8 form__parent">
-                <form method="POST">
+                <form method="POST" action="{{ route('contact.store') }}">
                     @csrf
                     <h4>Саволларингиз бўлса бизга мурожаат қилишнгиз мумкин
                     </h4>
