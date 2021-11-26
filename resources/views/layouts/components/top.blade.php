@@ -33,9 +33,15 @@
                             </button>
                             {{-- set language --}}
                             <div class="dropdown-menu lang-dropdown-menu">
-                                <a class="dropdown-item" href="?locale=uz">Ўзбекча</a>
-                                <a class="dropdown-item" href="?locale=ru">Русский</a>
-                                <a class="dropdown-item" href="?locale=en">English</a>
+                                @if (app()->getLocale() != 'uz')
+                                    <a class="dropdown-item" href="?locale=uz">Ўзбекча</a>
+                                @endif
+                                @if (app()->getLocale() != 'ru')
+                                    <a class="dropdown-item" href="?locale=ru">Русский</a>
+                                @endif
+                                @if (app()->getLocale() != 'en')
+                                    <a class="dropdown-item" href="?locale=en">English</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -79,13 +85,13 @@
                     </div>
                     <div class="col-3 text-right">
                         <div class="purchase money-degree">
-                            <p>Sotib olish</p>
+                            <p>@lang('menu.Sotib olish')</p>
                             <h5>10680.00 <i class="fas fa-sort-down"></i></h5>
                         </div>
                     </div>
                     <div class="col-3 text-right">
                         <div class="sell money-degree">
-                            <p>Sotish</p>
+                            <p>@lang('menu.Sotish')</p>
                             <h5>10745.00 <i class="fas fa-sort-up"></i></h5>
                         </div>
                     </div>

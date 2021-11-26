@@ -5,53 +5,52 @@
                 <i class="fas fa-bars menu__btn"></i>
                 <ul class="header__menu">
                     <i class="fas fa-times menu__close"></i>
-                    <li><a href="{{ route('main') }}">Бош саҳифа</a></li>
+                    <li><a href="{{ route('main') }}">@lang('menu.main')</a></li>
                     <li class="dropdown__parent">
-                        <i class="fas fa-chevron-right d-inline d-lg-none"></i>  Биз ҳақимизда
+                        <i class="fas fa-chevron-right d-inline d-lg-none"></i>  @lang('menu.about')
                         <ul class="dropdown__menu">
                             <li>
-                                <a href="{{ route('about') }}">Биз ҳақимизда</a>
+                                <a href="{{ route('about') }}">@lang('menu.about')</a>
                             </li>
                             <li>
-                                <a href="{{ route('territory') }}">«Сирдарё» ЭИЗ Дирекцияси </a>
+                                <a href="{{ route('territory') }}">@lang('menu.direction') </a>
                             </li>
                             <li>
-                                <a href="{{ route('eiz-vazifasi') }}">«Сирдарё» ЭИЗнинг вазифалари</a>
+                                <a href="{{ route('eiz-vazifasi') }}">@lang('menu.functions')</a>
                             </li>
                             <li>
-                                <a href="{{ route('sirdaryo-eiz-mk') }}">«Сирдарё» ЭИЗ маъмурий кенгаши </a>
+                                <a href="{{ route('sirdaryo-eiz-mk') }}">@lang('menu.council') </a>
                             </li>
 
                         </ul>
                     </li>
                     <li class="dropdown__parent">
-                        <i class="fas fa-chevron-right d-inline d-lg-none"></i>  «Сирдарё» ЭИЗ бизнес
+                        <i class="fas fa-chevron-right d-inline d-lg-none"></i>  @lang('menu.business')
                         <ul class="dropdown__menu">
                             <li>
-                                <a href="{{ route('bussiness') }}">Бизнесни қандай бошлайман?  </a>
+                                <a href="{{ route('bussiness') }}">@lang('menu.start_business')</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('why') }}">@lang('menu.why')</a>
 
                             </li>
                             <li>
-                                <a href="{{ route('why') }}">Нима учун «Сирдарё» ЭИЗ?</a>
+                                <a href="{{ route('privilege') }}">@lang('menu.preferences')</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('activity_types') }}">@lang('menu.types of activities')</a>
 
                             </li>
                             <li>
-                                <a href="{{ route('privilege') }}">Имтиёз ва преферециялар  </a>
-                            </li>
-                            <li>
-                                <a href="{{ route('activity_types') }}">«Сирдарё» эиз ҳудудидаги фаолият турлари  </a>
-
-                            </li>
-                            <li>
-                                <a href="{{ route('project') }}"> Мувофаққиятли лойиҳалар </a>
+                                <a href="{{ route('project') }}">@lang('menu.successful projects')</a>
 
                             </li>
 
                         </ul>
                     </li>
-                    <li><a href="{{ route('news') }}">Янгиликлар</a></li>
-                    <li><a href="{{ route('multimedia') }}">Мултимедия</a></li>
-                    <li><a href="{{ route('contact') }}">Алоқалар</a></li>
+                    <li><a href="{{ route('news') }}">@lang('menu.news')</a></li>
+                    <li><a href="{{ route('multimedia') }}">@lang('menu.multimedia')</a></li>
+                    <li><a href="{{ route('contact') }}">@lang('menu.contact')</a></li>
                 </ul>
             </div>
             <div class="col-7 col-lg-3 d-flex justify-content-end">

@@ -132,21 +132,21 @@
                                         <p>Все фотографии</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{ route('post.create') }}" class="nav-link">
                                         <p>Добавить фото</p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="{{ route('post.index') }}" class="nav-link">
                                         <p>Все видео</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="{{ route('post.create') }}" class="nav-link">
                                         <p>Добавить видео</p>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </li>
 
@@ -188,7 +188,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('users.index') }}" class="nav-link">
+                            <a href="{{ route('contact.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>Заявки</p>
                             </a>
