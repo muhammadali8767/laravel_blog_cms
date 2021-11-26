@@ -3,13 +3,13 @@
 @section('content')
 
     <div class="news">
-        <h2>Мувофаққиятли лойиҳалар</h2>
+        <h2>@lang('menu.successful projects')</h2>
         <div class="news__category">
-            <a href="/index.html">Bosh Sahifa</a>
+            <a href="{{ route('main') }}">@lang('menu.main')</a>
             <span>/</span>
-            <a href="#!">«Сирдарё» ЭИЗ бизнес </a>
+            <a href="#">@lang('menu.business')</a>
             <span>/</span>
-            <a href="/project.html">Мувофаққиятли лойиҳалар </a>
+            <a href="#">@lang('menu.successful projects')</a>
         </div>
     </div>
     <div class="main">

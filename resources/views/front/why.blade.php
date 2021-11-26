@@ -3,13 +3,13 @@
 @section('content')
 
     <div class="news">
-        <h2>Нима учун «Сирдарё» ЭИЗ?</h2>
+        <h2>@lang('menu.why')</h2>
         <div class="news__category">
-            <a href="#!">Bosh Sahifa</a>
+            <a href="{{ route('main') }}">@lang('menu.main')</a>
             <span>/</span>
-            <a href="#!">«Сирдарё» ЭИЗ Бизнес </a>
+            <a href="#">@lang('menu.business')</a>
             <span>/</span>
-            <a href="#!">Нима учун «Сирдарё» ЭИЗ? </a>
+            <a href="#">@lang('menu.why')</a>
         </div>
     </div>
     <div class="main">

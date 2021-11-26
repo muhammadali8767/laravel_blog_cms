@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="news">
-        <h2>Бизнесни қандай бошлайман?</h2>
+        <h2>@lang('menu.start_business')</h2>
         <div class="news__category">
-            <a href="/index.html">Bosh Sahifa</a>
+            <a href="{{ route('main') }}">@lang('menu.main')</a>
             <span>/</span>
-            <a href="#!">«Сирдарё» ЭИЗ бизнес </a>
+            <a href="#">@lang('menu.business')</a>
             <span>/</span>
-            <a href="/bussiness_how_begin.html">Бизнесни қандай бошлайман? </a>
+            <a href="#">@lang('menu.start_business')</a>
         </div>
     </div>
     <div class="main">

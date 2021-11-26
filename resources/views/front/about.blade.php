@@ -3,12 +3,11 @@
 @section('content')
 
 <div class="news">
-    <h2>Biz haqimizda</h2>
+    <h2>@lang('menu.about')</h2>
     <div class="news__category">
-        <a href="#!">Bosh Sahifa</a>
+        <a href="{{ route('main') }}">@lang('menu.main')</a>
         <span>/</span>
-        <a href="#!">Biz haqimizda </a>
-
+        <a href="#">@lang('menu.about')</a>
     </div>
 </div>
 <div class="main">

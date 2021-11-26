@@ -3,11 +3,11 @@
 @section('content')
 
     <div class="news">
-        <h2>Мултимедия </h2>
+        <h2>@lang('menu.multimedia')</h2>
         <div class="news__category">
-            <a href="#!">Bosh Sahifa</a>
+            <a href="{{ route('main') }}">@lang('menu.main')</a>
             <span>/</span>
-            <a href="./mutimedia.html">Мултимедия </a>
+            <a href="{{ route('multimedia') }}">@lang('menu.multimedia')</a>
         </div>
 
     </div>
