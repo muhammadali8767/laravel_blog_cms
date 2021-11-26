@@ -59,7 +59,7 @@
                                         {{ $page->id }}
                                     </td>
                                     <td>
-                                        {{-- {{ $page->title }} --}}
+                                        {{ $page->title }}
                                     </td>
                                     <td>
                                         <a href="{{ route('page', $page->slug) }}">
