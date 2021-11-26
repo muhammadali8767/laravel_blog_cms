@@ -35,16 +35,17 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                            class="fas fa-bars"></i></a>
                 </li>
             </ul>
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-            <form action="{{ route('logout') }}" method="post">
-                @csrf
-                <button class="btn btn-link" type="submit">Выход</button>
-            </form>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button class="btn btn-link" type="submit">Выход</button>
+                </form>
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -66,7 +67,8 @@
                         <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                    <a href="{{ route('users.show', Auth::user()) }}" class="d-block">{{ Auth::user()->name }}</a>
+                        <a href="{{ route('users.show', Auth::user()) }}"
+                            class="d-block">{{ Auth::user()->name }}</a>
                     </div>
                 </div>
 
@@ -248,6 +250,24 @@
         referrerpolicy="origin"></script>
     <script type="text/javascript" src="/packages/barryvdh/elfinder/js/standalonepopup.js"></script>
     <script src="/admin/admin.js"></script>
+    <script>
+        $(function() {
+            if ($("#type option:selected").val() != 2) {
+                $('.hide-if-old').hide()
+            } else {
+                $('.hide-if-old').show()
+            }
+            $("#type").change(function() {
+                if ($("#type option:selected").val() != 2) {
+                    $('.hide-if-old').hide()
+                } else {
+                    $('.hide-if-old').show()
+                }
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>

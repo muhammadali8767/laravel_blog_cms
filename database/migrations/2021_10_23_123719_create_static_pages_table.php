@@ -20,11 +20,17 @@ class CreateStaticPagesTable extends Migration
             $table->string('title_ru')->nullable();
             $table->string('title_en')->nullable();
 
+            $table->string('sub_title_uz')->nullable();
+            $table->string('sub_title_ru')->nullable();
+            $table->string('sub_title_en')->nullable();
+
             $table->text('text_uz');
             $table->text('text_ru')->nullable();
             $table->text('text_en')->nullable();
 
             $table->string('slug');
+            $table->string('image')->nullable();
+            $table->tinyInteger('type');
 
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();

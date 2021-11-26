@@ -13,7 +13,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}">Главная</a></li>
-                    <li class="breadcrumb-item active">Все страницы</li>
+                    <li class="breadcrumb-item active">Все страницы {{ count($pages) }}</li>
                     </ol>
                 </div>
             </div><!-- /.row -->
@@ -59,7 +59,7 @@
                                         {{ $page->id }}
                                     </td>
                                     <td>
-                                        {{ $page->title }}
+                                        {{-- {{ $page->title }} --}}
                                     </td>
                                     <td>
                                         <a href="{{ route('page', $page->slug) }}">

@@ -29,11 +29,9 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
+        dd($contact);
         $contact->update(['seen' => true]);
 
-        $contact->save();
-
-        dd($contact);
         if ($contact->save()) {
             return view('admin.contact.show', compact('contact'));
         } else {

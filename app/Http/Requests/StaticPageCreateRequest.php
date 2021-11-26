@@ -25,12 +25,12 @@ class StaticPageCreateRequest extends FormRequest
     {
         return [
             'title_uz'=> 'required|string|max:255',
-            'title_ru'=> 'string|max:255',
-            'title_en'=> 'string|max:255',
+            // 'title_ru'=> 'string|max:255',
+            // 'title_en'=> 'string|max:255',
 
-            'text_uz' => 'required|string|max:255',
-            'text_ru' => 'string|max:255',
-            'text_en' => 'string|max:255',
+            'text_uz' => 'required|string',
+            'text_ru' => 'string',
+            'text_en' => 'string',
         ];
     }
 }

@@ -38,6 +38,21 @@ class StaticPage extends Model
         return $title;
     }
 
+    public function getSubTitleAttribute($sub_title){
+        switch (app()->getLocale()) {
+            case 'en':
+                $sub_title = $this->sub_title_en;
+                break;
+            case 'ru':
+                $sub_title = $this->sub_title_ru;
+                break;
+            default:
+                $sub_title = $this->sub_title_uz;
+                break;
+        }
+        return $sub_title;
+    }
+
     public function getTextAttribute($text){
         switch (app()->getLocale()) {
             case 'en':
