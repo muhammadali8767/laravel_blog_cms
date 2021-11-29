@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="footer__about">
-                        <h3>Биз хақимизда</h3>
+                        <h3>@lang('footer.БИЗ ХАҚИМИЗДА')</h3>
                         <ul>
                             <li>
 

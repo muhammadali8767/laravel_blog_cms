@@ -30,7 +30,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="about__inner-item">
-                                <h2>{{ $page->title }}</h2><br>
+                                <h2>{{ $page->title }}</h2>
                                 @if ($page->sub_title)
                                     <p>{{ $page->sub_title }}</p>
                                 @endif
@@ -45,6 +45,8 @@
         </div>
         <section class="container-fluid p-0 bg-white">
             <div class="container about__text">
+             <br>
+             <br>
                 <p>{!! $page->text !!}</p>
             </div>
         </section>
