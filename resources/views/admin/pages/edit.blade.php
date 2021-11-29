@@ -24,6 +24,12 @@
                     <h4><i class="icon fa fa-check"></i>{{ session('success') }}</h4>
                 </div>
             @endif
+            @if($errors->any())
+                <ul>
+                    {!! implode('', $errors->all('<li class="text-danger">:message</li>')) !!}
+                </ul>
+            @endif
+
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
