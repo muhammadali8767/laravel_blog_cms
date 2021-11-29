@@ -20,31 +20,31 @@
                         <ul>
                             <li>
 
-                                <a href="#!">«Сирдарё» ЭИЗ Дирекцияси</a>
+                                <a href="#!">@lang('menu.direction')</a>
                             </li>
-                            <li><a href="#!">«Сирдарё» ЭИЗ маъмурий кенгаши </a></li>
-                            <li><a href="#!">«Сирдарё» ЭИЗнинг вазифалари</a></li>
-                            <li><a href="#!">Инфратузилма</a></li>
+                            <li><a href="#!">@lang('menu.council') </a></li>
+                            <li><a href="#!">@lang('menu.functions')</a></li>
+                            <li><a href="#!">@lang('footer.Инфратузилма')</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="footer__about_bussiness">
-                        <h3>Жиззах ЭИЗда Бизнес</h3>
+                        <h3>@lang('footer.«Сирдарё» ЭИЗда Бизнес')</h3>
                         <ul>
                             <li>
 
-                                <a href="#!">Бизнесни қандай бошлайман?</a>
+                                <a href="#!">@lang('menu.start_business')</a>
                             </li>
-                            <li><a href="#!">«Сирдарё» ЭИЗда фаолият турлари </a></li>
-                            <li><a href="#!">Нима учун Сирдарё ЭИЗ?</a></li>
+                            <li><a href="#!">@lang('menu.types of activities') </a></li>
+                            <li><a href="#!">@lang('menu.why')</a></li>
 
                         </ul>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 ">
                     <div class="footer__media">
-                        <h3>Мултимедиа</h3>
+                        <h3>@lang('footer.Мултимедиа')</h3>
                         <ul class="row">
                             <li>
                                 <a href="#!"><img src="/images/photo 1.png" alt="png"></a>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-12 col-md-4 ">
                     <ul class="row  justify-content-lg-end social">
-                        <li>Ижтимоий тармоқлар:</li>
+                        <li>@lang('footer.Ижтимоий тармоқлар'):</li>
                         <li> <a href="#"><i class="fab fa-facebook"></i></a></li>
                         <li> <a href="#"><i class="fab fa-telegram-plane"></i></a></li>
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
