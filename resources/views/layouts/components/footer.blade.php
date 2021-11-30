@@ -82,17 +82,16 @@
                     <ul class="row ">
 
                         <li>
-                            <a href="#!">САЙТ ҲАҚИДА</a>
+                            <a href="#!">@lang('footer.САЙТ ҲАҚИДА')</a>
                         </li>
                         <li>
-                            <a href="#!">САЙТ ХАРИТАСИ</a>
+                            <a href="#!">@lang('footer.САЙТ ХАРИТАСИ')</a>
                         </li>
                         <li>
-                            <a href="#!">ҚАЙТА АЛОҚА</a>
+                            <a href="#!">@lang('footer.ҚАЙТА АЛОҚА')</a>
                         </li>
                     </ul>
-                    <p>© 2010-2021 "Сирдарё" эркин иктисодий зонаси Дирекцияси расмий веб сайти. Сайт материалларидан
-                        фойдаланганда www.fezsirdaryo.uz манба сифатида кўрсатилиши шарт.</p>
+                    <p>@lang('footer.2010-2021')</p>
                 </div>
                 <div class="col-12 col-md-4 ">
                     <ul class="row  justify-content-lg-end social">
@@ -102,7 +101,7 @@
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
-                    <p class="text">Cайт<span> "IT LIVE" </span>томонидан яратилган</p>
+                    <p class="text">@lang('footer.sayt')<span> @lang('footer.ITLIVE') </span> @lang('footer.sayt')</p>
                 </div>
             </div>
         </div>

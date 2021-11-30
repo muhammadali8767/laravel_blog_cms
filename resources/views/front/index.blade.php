@@ -11,8 +11,8 @@
                 <button class="video__btn">Видеони кўриш</button>
             </div>
             <div class="col-12 col-md-6  pl-md-4 about__col">
-                <p class="green_text">БИЗ ҲАҚИМИЗДА</p>
-                <h3>БИЗНEСИНГИЗНИ САМАРАЛИ БОШҚАРИНГ</h3>
+                <p class="green_text">@lang('contact.about')</p>
+                <h3>@lang('contact.about_title')</h3>
                 <p class="about_index__text">Эркин иқтисодий зона — минтақани жадал ижтимоий-иқтисодий ривожлантириш учун
                     мамлакат ва чет эл капиталини, юқори технология ва бошқарув тажрибасини жалб этиш мақсадида
                     тузиладиган, аниқ белгиланган маъмурий чегаралари ва алоҳида ҳуқуқий
@@ -211,7 +211,7 @@
         <div class="row">
             <div class="col-12 col-lg-8 form__parent">
                 <form action="">
-                    <h4>Саволларингиз бўлса бизга мурожаат қилишнгиз мумкин
+                    <h4>@lang('contact.brand')
                     </h4>
                     <div class="input__box">
                         <input type="text" name="name" placeholder="Исмингиз">
@@ -272,7 +272,7 @@
     <div class="container">
         <div class="row">
             <div class="col-10 m-auto ">
-                <h2>"Жиззах" ЭИЗ қатнашчилари</h2>
+                <h2>@lang('contact.brand')</h2>
                 <div class="slider__brand owl-carousel">
                     <div class="slider__brand_item">
                         <img src="/images/image 1.png" alt="png">
