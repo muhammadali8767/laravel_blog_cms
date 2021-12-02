@@ -1,4 +1,5 @@
-    <!-- FOOTER STARTING -->
+
+<!-- FOOTER STARTING -->
     <footer>
         <div class="container">
             <div class="row justify-content-md-center justify-content-between ">
@@ -20,10 +21,10 @@
                         <ul>
                             <li>
 
-                                <a href="#!">@lang('menu.direction')</a>
+                                <a href="{{ route('territory') }}">@lang('menu.direction')</a>
                             </li>
-                            <li><a href="#!">@lang('menu.council') </a></li>
-                            <li><a href="#!">@lang('menu.functions')</a></li>
+                            <li><a href="{{ route('sirdaryo-eiz-mk') }}">@lang('menu.council') </a></li>
+                            <li><a href="{{ route('eiz-vazifasi') }}">@lang('menu.functions')</a></li>
                             <li><a href="#!">@lang('footer.Инфратузилма')</a></li>
                         </ul>
                     </div>
@@ -34,10 +35,10 @@
                         <ul>
                             <li>
 
-                                <a href="#!">@lang('menu.start_business')</a>
+                                <a href="{{ route('bussiness') }}">@lang('menu.start_business')</a>
                             </li>
-                            <li><a href="#!">@lang('menu.types of activities') </a></li>
-                            <li><a href="#!">@lang('menu.why')</a></li>
+                            <li><a href="{{ route('activity_types') }}">@lang('menu.types of activities') </a></li>
+                            <li><a href="{{ route('why') }}">@lang('menu.why')</a></li>
 
                         </ul>
                     </div>
@@ -88,7 +89,7 @@
                             <a href="#!">@lang('footer.САЙТ ХАРИТАСИ')</a>
                         </li>
                         <li>
-                            <a href="#!">@lang('footer.ҚАЙТА АЛОҚА')</a>
+                            <a href="{{ route('contact') }}">@lang('footer.ҚАЙТА АЛОҚА')</a>
                         </li>
                     </ul>
                     <p>@lang('footer.2010-2021')</p>
