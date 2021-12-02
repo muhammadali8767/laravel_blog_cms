@@ -56,6 +56,6 @@ class StaticPageObserver
 
     private function setUser(StaticPage $page)
     {
-        $page->user_id = auth()->id();
+        $page->user_id = $page->user_id ?? auth()->id();
     }
 }

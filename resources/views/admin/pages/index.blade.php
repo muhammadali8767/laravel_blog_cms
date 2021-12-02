@@ -48,6 +48,9 @@
                                 <th>
                                     Дата добавления
                                 </th>
+                                <th>
+                                    Тип
+                                </th>
                                 <th style="width: 30%">
                                 </th>
                             </tr>
@@ -68,6 +71,14 @@
                                     </td>
                                     <td>
                                         {{ $page->created_at }}
+                                    </td>
+
+                                    <td>
+                                        @if ($page->type == 1)
+                                            Обычны
+                                        @else
+                                            С фото
+                                        @endif
                                     </td>
 
                                     <td class="project-actions text-right">

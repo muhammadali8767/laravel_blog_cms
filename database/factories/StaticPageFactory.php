@@ -5,17 +5,18 @@ namespace Database\Factories;
 use App\Models\Category;
 use App\Models\Media;
 use App\Models\Post;
+use App\Models\StaticPage;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PostFactory extends Factory
+class StaticPageFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Post::class;
+    protected $model = StaticPage::class;
 
     /**
      * Define the model's default state.
@@ -32,25 +33,31 @@ class PostFactory extends Factory
             5 => '/files\featured5.png'
         ];
 
+        $type = random_int(1, 2);
         $title_uz = $this->faker->sentence;
-        return [
+
+        $page = [
             'title_uz' => $title_uz,
             'title_ru' => $this->faker->sentence,
             'title_en' => $this->faker->sentence,
-
-            'short_uz' => $this->faker->text(255),
-            'short_ru' => $this->faker->text(255),
-            'short_en' => $this->faker->text(255),
 
             'text_uz' => $this->faker->realText(2000),
             'text_ru' => $this->faker->realText(2000),
             'text_en' => $this->faker->realText(2000),
 
-            'user_id' => User::all()->random()->id,
-            'category_id' => Category::all()->random()->id,
-
             'slug' => \Str::slug($title_uz),
-            'img' => $images[rand(1, 5)],
+            'type' => $type,
+
+            'user_id' => User::all()->random()->id,
         ];
+
+        if ($type == 2) {
+            $page['sub_title_uz'] = $this->faker->text(255);
+            $page['sub_title_ru'] = $this->faker->text(255);
+            $page['sub_title_en'] = $this->faker->text(255);
+            $page['image'] = $images[rand(1, 5)];
+        }
+
+        return $page;
     }
 }
