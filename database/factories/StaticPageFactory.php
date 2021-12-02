@@ -2,6 +2,12 @@
 
 namespace Database\Factories;
 
+<<<<<<< HEAD
+=======
+use App\Models\Category;
+use App\Models\Media;
+use App\Models\Post;
+>>>>>>> 83ffd598740b2c6af6f1530699006778eafc4226
 use App\Models\StaticPage;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -22,31 +28,39 @@ class StaticPageFactory extends Factory
      */
     public function definition()
     {
-        $pageType = random_int(1,2);
-        $title_uz = $this->faker->text(255);
-
-        $post =  [
-            'title_uz' => $title_uz,
-            'title_ru' => $this->faker->text(255),
-            'title_en' => $this->faker->text(255),
-
-            'text_uz' => $this->faker->paragraph,
-            'text_ru' => $this->faker->paragraph,
-            'text_en' => $this->faker->paragraph,
-
-            'type' => $pageType,
-            'slug' => \Str::slug($title_uz),
-            'user_id' => User::factory(),
+        $images = [
+            1 => '/files\featured1.png',
+            2 => '/files\featured2.png',
+            3 => '/files\featured3.png',
+            4 => '/files\featured4.png',
+            5 => '/files\featured5.png'
         ];
 
-        if ($pageType == 2) {
-            $post['sub_title_uz'] = $this->faker->text(255);
-            $post['sub_title_ru'] = $this->faker->text(255);
-            $post['sub_title_en'] = $this->faker->text(255);
-            $post['imnage'] = $this->faker->image('public/files');
+        $type = random_int(1, 2);
+        $title_uz = $this->faker->sentence;
+
+        $page = [
+            'title_uz' => $title_uz,
+            'title_ru' => $this->faker->sentence,
+            'title_en' => $this->faker->sentence,
+
+            'text_uz' => $this->faker->realText(2000),
+            'text_ru' => $this->faker->realText(2000),
+            'text_en' => $this->faker->realText(2000),
+
+            'slug' => \Str::slug($title_uz),
+            'type' => $type,
+
+            'user_id' => User::all()->random()->id,
+        ];
+
+        if ($type == 2) {
+            $page['sub_title_uz'] = $this->faker->text(255);
+            $page['sub_title_ru'] = $this->faker->text(255);
+            $page['sub_title_en'] = $this->faker->text(255);
+            $page['image'] = $images[rand(1, 5)];
         }
 
-        // dd($post);
-        return $post;
+        return $page;
     }
 }

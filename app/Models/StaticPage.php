@@ -23,6 +23,11 @@ class StaticPage extends Model
 
     protected $guarded = [];
 
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
+
     public function getTitleAttribute($title){
         switch (app()->getLocale()) {
             case 'en':

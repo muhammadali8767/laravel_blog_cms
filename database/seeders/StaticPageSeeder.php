@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Post;
+use App\Models\StaticPage;
+use Database\Factories\StaticPageFactory;
 use Illuminate\Database\Seeder;
 
-class PostSeeder extends Seeder
+class StaticPageSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +15,6 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        Post::factory()->times(50)->create();
+        StaticPage::factory()->times(20)->create();
     }
 }

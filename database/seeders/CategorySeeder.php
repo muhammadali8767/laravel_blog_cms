@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
-class MediaSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,6 @@ class MediaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Category::factory()->times(10)->create();
     }
 }

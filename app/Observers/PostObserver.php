@@ -18,6 +18,7 @@ class PostObserver
     public function creating(Post $post)
     {
         $this->setUser($post);
+        // return $post->user_id = $post->user_id ?? \Auth::id();
     }
 
     /**
@@ -84,6 +85,6 @@ class PostObserver
      */
     private function setUser(Post $post)
     {
-        $post->user_id = auth()->id();
+        $post->user_id = $post->user_id ?? auth()->id();
     }
 }

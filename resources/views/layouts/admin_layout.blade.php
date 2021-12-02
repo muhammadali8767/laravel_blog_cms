@@ -121,25 +121,20 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('post.index') }}" class="nav-link">
+                                    <a href="{{ route('photoList') }}" class="nav-link">
                                         <p>Все фотографии</p>
                                     </a>
                                 </li>
-                                {{-- <li class="nav-item">
-                                    <a href="{{ route('post.create') }}" class="nav-link">
-                                        <p>Добавить фото</p>
-                                    </a>
-                                </li> --}}
                                 <li class="nav-item">
-                                    <a href="{{ route('post.index') }}" class="nav-link">
+                                    <a href="{{ route('videoList') }}" class="nav-link">
                                         <p>Все видео</p>
                                     </a>
                                 </li>
-                                {{-- <li class="nav-item">
-                                    <a href="{{ route('post.create') }}" class="nav-link">
-                                        <p>Добавить видео</p>
+                                <li class="nav-item">
+                                    <a href="{{ route('media.create') }}" class="nav-link">
+                                        <p>Добавить медиа</p>
                                     </a>
-                                </li> --}}
+                                </li>
                             </ul>
                         </li>
 

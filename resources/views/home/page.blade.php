@@ -31,12 +31,8 @@
                         <div class="col-12">
                             <div class="about__inner-item">
                                 <h2>{{ $page->title }}</h2>
-                                @if ($page->sub_title)
-                                    <p>{{ $page->sub_title }}</p>
-                                @endif
-                                @if ($page->image)
-                                    <img class="w-100" src="{{ $page->image }}" alt="png">
-                                @endif
+                                <p>{{ $page->sub_title }}</p>
+                                <img class="w-100" src="{{ $page->image }}" alt="png">
                             </div>
                         </div>
                     </div>
@@ -45,8 +41,8 @@
         </div>
         <section class="container-fluid p-0 bg-white">
             <div class="container about__text">
-             <br>
-             <br>
+                <br>
+                <br>
                 <p>{!! $page->text !!}</p>
             </div>
         </section>

@@ -5,7 +5,7 @@
 <div class="container-fluid globus__img header__bg d-flex justify-content-center p-0">
     <img src="/images/globus.png" alt="">
     <div class="container contact__address-contact-text">
-        <h3>Саволларингиз борми? Батафсил маълумот олиш учун <br> биз билан боғланинг</h3>
+        <h3>@lang('contact.contact_title')</h3>
         <div>
             <ul>
                 <li class="name">МАНЗИЛ</li>

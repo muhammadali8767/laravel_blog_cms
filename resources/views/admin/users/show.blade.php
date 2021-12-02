@@ -43,14 +43,17 @@
                                 <img class="profile-user-img img-fluid img-circle" src="/admin/dist/img/user1-128x128.jpg"
                                     alt="User profile picture">
                             </div>
-
-                            <h3 class="profile-username text-center">{{ $user->name }}</h3>
-
+                            <br>
+                            <h4 class="text-center">Имя ползователя:</h4>
+                            <h3 class="profile-username text-muted text-center">{{ $user->name }}</h3>
+                            <br>
+                            <h4 class="text-center">Тип ползователя:</h4>
                             @if ($user->hasRole('admin'))
                                 <p class="text-muted text-center">Администратор</p>
                             @else
                                 <p class="text-muted text-center">Пользователь</p>
                             @endif
+                            <br>
 
                             {{-- <ul class="list-group list-group-unbordered mb-3">
                             <li class="list-group-item">

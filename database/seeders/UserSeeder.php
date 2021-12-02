@@ -31,6 +31,7 @@ class UserSeeder extends Seeder
 
         $roleUser = Role::firstOrCreate(['name' => 'user']);
         $roleAdmin = Role::firstOrCreate(['name' => 'admin']);
+
         $admin->assignRole($roleAdmin);
         $user->assignRole($roleUser);
     }

@@ -32,7 +32,7 @@ class CreateStaticPagesTable extends Migration
             $table->string('image')->nullable();
             $table->tinyInteger('type');
 
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

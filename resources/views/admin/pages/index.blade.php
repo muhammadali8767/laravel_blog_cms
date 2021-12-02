@@ -48,6 +48,9 @@
                                 <th>
                                     Дата добавления
                                 </th>
+                                <th>
+                                    Тип
+                                </th>
                                 <th style="width: 30%">
                                 </th>
                             </tr>
@@ -70,6 +73,14 @@
                                         {{ $page->created_at }}
                                     </td>
 
+                                    <td>
+                                        @if ($page->type == 1)
+                                            Обычны
+                                        @else
+                                            С фото
+                                        @endif
+                                    </td>
+
                                     <td class="project-actions text-right">
                                         <a class="btn btn-info btn-sm" href="{{ route('pages.edit', $page->id) }}">
                                             <i class="fas fa-pencil-alt"></i>
@@ -85,12 +96,13 @@
                                     </td>
                                 </tr>
                             @endforeach
-
-
                         </tbody>
                     </table>
                 </div>
                 <!-- /.card-body -->
+            </div>
+            <div class="row justify-content-center align-items-center">
+                {{ $pages->links() }}
             </div>
         </div><!-- /.container-fluid -->
     </section>

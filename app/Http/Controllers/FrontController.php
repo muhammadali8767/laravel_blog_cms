@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContacCreateRequest;
 use App\Models\Contact;
+use App\Models\Post;
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
 
@@ -61,7 +62,8 @@ class FrontController extends Controller
 
     public function news()
     {
-        return view('front.news');
+        $posts = Post::orderBy('created_at', 'DESC')->paginate(9);
+        return view('front.news', compact('posts'));
     }
 
     public function multimedia()
