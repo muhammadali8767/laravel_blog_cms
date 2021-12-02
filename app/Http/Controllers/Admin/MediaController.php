@@ -5,19 +5,22 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Media;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\MediaCreateRequest;
 
 class MediaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function photoList()
     {
-        $photo = Media::where('type', 'photo')->all();
-        $video = Media::where('type', 'video')->all();
-        return view('admin.media.index')
+        $type = 'photo';
+        $mediaList = Media::where('type', $type)->paginate(9);
+        return view('admin.media.index', compact('mediaList', 'type'));
+    }
+
+    public function videoList()
+    {
+        $type = 'video';
+        $mediaList = Media::where('type', $type)->paginate(9);
+        return view('admin.media.index', compact('mediaList', 'type'));
     }
 
     /**
@@ -27,7 +30,7 @@ class MediaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.media.create');
     }
 
     /**
@@ -36,9 +39,15 @@ class MediaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MediaCreateRequest $request)
     {
-        //
+        $media = Media::create($request->except('_token'));
+
+        if ($media->save()) {
+            return redirect()->back()->withSuccess('Медиа была успешно добавлена!');
+        } else {
+            return redirect()->back()->withErrors('Медиа не была добавлена!');
+        }
     }
 
     /**
@@ -47,10 +56,11 @@ class MediaController extends Controller
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function show(Media $media)
-    {
-        //
-    }
+    // public function show(Media $media)
+    // {
+    //     dd(__METHOD__);
+    //     return view('admin.media.show', compact('media'));
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -60,7 +70,7 @@ class MediaController extends Controller
      */
     public function edit(Media $media)
     {
-        //
+        return view('admin.media.edit', compact('media'));
     }
 
     /**
@@ -70,9 +80,15 @@ class MediaController extends Controller
      * @param  \App\Models\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Media $media)
+    public function update(MediaCreateRequest $request, Media $media)
     {
-        //
+        $media->update($request->except('_token'));
+
+        if ($media->save()) {
+            return redirect()->back()->withSuccess('Медиа была успешно обновлена!');
+        } else {
+            return redirect()->back()->withErrors('Медиа не была обновлена!');
+        }
     }
 
     /**
@@ -83,6 +99,8 @@ class MediaController extends Controller
      */
     public function destroy(Media $media)
     {
-        //
+        $post->delete();
+
+        return redirect()->back()->withSuccess('Медиа была успешно удалена!');
     }
 }

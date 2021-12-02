@@ -85,6 +85,9 @@
                 </div>
                 <!-- /.card-body -->
             </div>
+            <div class="row justify-content-center align-items-center">
+                {{ $categories->links() }}
+            </div>
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

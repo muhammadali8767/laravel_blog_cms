@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title', 'Все статьи')
+@section('title', 'Все медиа')
 
 @section('content')
     <!-- Content Header (Page header) -->
@@ -8,8 +8,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Все статьи</h1>
+                    <h1 class="m-0">Все медиа</h1>
                 </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}">Главная</a></li>
+                        <li class="breadcrumb-item active">Все медиа</li>
+                    </ol>
+                </div>
             </div><!-- /.row -->
             @if (session('success'))
                 <div class="alert alert-success" role="alert">
@@ -33,46 +39,37 @@
                                     ID
                                 </th>
                                 <th>
-                                    Название
+                                    Мелиа
                                 </th>
                                 <th>
-                                    Url
-                                </th>
-                                <th>
-                                    Категория
-                                </th>
-                                <th>
-                                    Дата добавления
+                                    Тип
                                 </th>
                                 <th style="width: 30%">
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($posts as $post)
+                            @foreach ($mediaList as $media)
                                 <tr>
                                     <td>
-                                        {{ $post->id }}
+                                        {{ $media->id }}
                                     </td>
                                     <td>
-                                        {{ $post->title }}
+                                        {{ $media->title }}
                                     </td>
                                     <td>
-                                        <a href="{{ route('category_post', [$post->category->slug, $post->slug]) }}">
-                                            {{ route('category_post', [$post->category->slug, $post->slug]) }}
+                                        {{ $media->type }}
+                                    </td>
+                                    {{-- <td>
+                                        <a href="{{ route('media', $media->slug) }}">
+                                            {{ route('media', $media->slug) }}
                                         </a>
-                                    </td>
-                                    <td>
-                                        {{ $post->category->title }}
-                                    </td>
-                                    <td>
-                                        {{ $post->created_at }}
-                                    </td>
+                                    </td> --}}
                                     <td class="project-actions text-right">
-                                        <a class="btn btn-info btn-sm" href="{{ route('post.edit', $post->id) }}">
+                                        <a class="btn btn-info btn-sm" href="{{ route('media.edit', $media->id) }}">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('post.destroy', $post->id) }}" method="POST"
+                                        <form action="{{ route('media.destroy', $media->id) }}" method="POST"
                                             style="display: inline-block">
                                             @csrf
                                             @method('DELETE')
@@ -91,7 +88,7 @@
                 <!-- /.card-body -->
             </div>
             <div class="row justify-content-center align-items-center">
-                {{ $posts->links() }}
+                {{ $mediaList->links() }}
             </div>
         </div><!-- /.container-fluid -->
     </section>

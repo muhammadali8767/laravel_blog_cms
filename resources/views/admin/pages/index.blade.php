@@ -96,12 +96,13 @@
                                     </td>
                                 </tr>
                             @endforeach
-
-
                         </tbody>
                     </table>
                 </div>
                 <!-- /.card-body -->
+            </div>
+            <div class="row justify-content-center align-items-center">
+                {{ $pages->links() }}
             </div>
         </div><!-- /.container-fluid -->
     </section>
