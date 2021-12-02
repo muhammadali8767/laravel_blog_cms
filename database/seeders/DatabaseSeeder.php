@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Database\Factories\PostFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,8 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // $this->call(UserSeeder::class);
         // \App\Models\User::factory(10)->create();
-        // \App\Models\Category::factory(3)->create();
+        \App\Models\Category::factory(3)->create();
         \App\Models\Post::factory(20)->create();
+        \App\Models\StaticPage::factory(20)->create();
     }
 }

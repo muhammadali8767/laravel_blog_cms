@@ -22,11 +22,11 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
-        $title_uz = $this->faker->title;
+        $title_uz = $this->faker->text(50);
         return [
             'title_uz' => $title_uz,
-            'title_ru' => $this->faker->title,
-            'title_en' => $this->faker->title,
+            'title_ru' => $this->faker->text(50),
+            'title_en' => $this->faker->text(50),
 
             'slug' => \Str::slug($title_uz),
         ];

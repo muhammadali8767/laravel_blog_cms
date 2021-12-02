@@ -28,7 +28,7 @@
             <div class="col-12 col-lg-8 form__parent">
                 <form method="POST">
                     @csrf
-                    <h4>Саволларингиз бўлса бизга мурожаат қилишнгиз мумкин
+                    <h4>@lang('contact.contact_title')
                     </h4>
                     <div class="input__box">
                         <input type="text" name="name" placeholder="Исмингиз" required>
