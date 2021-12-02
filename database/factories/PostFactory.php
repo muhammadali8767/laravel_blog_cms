@@ -24,10 +24,6 @@ class PostFactory extends Factory
      */
     public function definition()
     {
-<<<<<<< HEAD
-        $title_uz = $this->faker->text(255);
-        $post =  [
-=======
         $images = [
             1 => '/files\featured1.png',
             2 => '/files\featured2.png',
@@ -38,7 +34,6 @@ class PostFactory extends Factory
 
         $title_uz = $this->faker->sentence;
         return [
->>>>>>> 83ffd598740b2c6af6f1530699006778eafc4226
             'title_uz' => $title_uz,
             'title_ru' => $this->faker->sentence,
             'title_en' => $this->faker->sentence,
@@ -51,11 +46,7 @@ class PostFactory extends Factory
             'text_ru' => $this->faker->realText(2000),
             'text_en' => $this->faker->realText(2000),
 
-<<<<<<< HEAD
-            'user_id' => User::factory(),
-=======
             'user_id' => User::all()->random()->id,
->>>>>>> 83ffd598740b2c6af6f1530699006778eafc4226
             'category_id' => Category::all()->random()->id,
 
             'slug' => \Str::slug($title_uz),
