@@ -2,12 +2,9 @@
 
 namespace Database\Factories;
 
-<<<<<<< HEAD
-=======
 use App\Models\Category;
 use App\Models\Media;
 use App\Models\Post;
->>>>>>> 83ffd598740b2c6af6f1530699006778eafc4226
 use App\Models\StaticPage;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;

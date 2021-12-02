@@ -19,7 +19,7 @@
                         <img class="img-fluid" src="{{ $post->img }}">
                         <span class="type">{{ $post->category->title }}</span>
                         <h4 class="news__title">{{ $post->title }}</h4>
-                        <a class="news__text" href="./news-inner.html">{{ $post->short }}</a>
+                        <a class="news__text" href="{{ route('category_post', [$post->category->slug, $post->slug]) }}">{{ $post->short }}</a>
                         <div class="info-time">
                             <i class="far fa-clock"></i>
                             <span>{{ $post->created_at }}</span>
