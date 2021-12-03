@@ -61,6 +61,8 @@ class HomeController extends Controller
         $category = Category::where('slug', $category_slug)->firstOrFail();
         $post = Post::where('slug', $slug)->where('category_id', $category->id)->firstOrFail();
 
+        $post->update(['seen' => $post->seen + 1]);
+        $post->save();
         return view('home.post', compact('post'));
     }
 }

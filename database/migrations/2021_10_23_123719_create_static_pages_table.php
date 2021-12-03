@@ -20,9 +20,9 @@ class CreateStaticPagesTable extends Migration
             $table->string('title_ru')->nullable();
             $table->string('title_en')->nullable();
 
-            $table->string('sub_title_uz')->nullable();
-            $table->string('sub_title_ru')->nullable();
-            $table->string('sub_title_en')->nullable();
+            $table->text('sub_title_uz')->nullable();
+            $table->text('sub_title_ru')->nullable();
+            $table->text('sub_title_en')->nullable();
 
             $table->text('text_uz');
             $table->text('text_ru')->nullable();

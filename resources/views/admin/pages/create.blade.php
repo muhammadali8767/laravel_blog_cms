@@ -19,6 +19,7 @@
                 </div>
 
             </div><!-- /.row -->
+            @include('layouts.components.admin.message')
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->

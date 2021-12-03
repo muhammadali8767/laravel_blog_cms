@@ -24,7 +24,7 @@
                             <i class="far fa-clock"></i>
                             <span>{{ $post->created_at }}</span>
                             <i class="far fa-eye"></i>
-                            <span>23 153</span>
+                            <span>{{ $post->seen }}</span>
                         </div>
                     </div>
                 @endforeach

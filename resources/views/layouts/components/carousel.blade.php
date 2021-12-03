@@ -6,8 +6,8 @@
                 <p>Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона
                     жамоамизга қўнғироқ қилинг.</p>
                 <div class="slider__btns">
-                    <a class="more_info" href="/bussiness_how_begin.html">Батафсил</a>
-                    <a class="contact__btn" href="/contact.html">Боғланиш</a>
+                    <a class="more_info" href="{{ route('bussiness') }}">Батафсил</a>
+                    <a class="contact__btn" href="{{ route('contact') }}">Боғланиш</a>
                 </div>
             </div>
             <div class="slide">
@@ -15,12 +15,14 @@
                 <p>Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона
                     жамоамизга қўнғироқ қилинг.</p>
                 <div class="slider__btns">
-                    <a class="more_info" href="/bussiness_how_begin.html">Батафсил</a>
-                    <a class="contact__btn" href="/contact.html">Боғланиш</a>
+                    <a class="more_info" href="{{ route('bussiness') }}">Батафсил</a>
+                    <a class="contact__btn" href="{{ route('contact') }}">Боғланиш</a>
                 </div>
             </div>
         </div>
-        <i class="fas fa-arrow-down header__down_btn"></i>
+        <a href="#about">
+            <i class="fas fa-arrow-down header__down_btn"></i>
+        </a>
         <div class="header__progress">
             <div class="progress__line"></div>
         </div>

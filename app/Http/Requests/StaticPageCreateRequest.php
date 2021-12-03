@@ -28,9 +28,9 @@ class StaticPageCreateRequest extends FormRequest
             'title_ru'=> 'nullable|string|max:255',
             'title_en'=> 'nullable|string|max:255',
 
-            'sub_title_uz'=> 'nullable|string|max:255',
-            'sub_title_ru'=> 'nullable|string|max:255',
-            'sub_title_en'=> 'nullable|string|max:255',
+            'sub_title_uz'=> 'nullable|string',
+            'sub_title_ru'=> 'nullable|string',
+            'sub_title_en'=> 'nullable|string',
 
             'text_uz' => 'required|string',
             'text_ru' => 'nullable|string',
