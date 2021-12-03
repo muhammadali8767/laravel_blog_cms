@@ -12,15 +12,21 @@ class MediaController extends Controller
     public function photoList()
     {
         $type = 'photo';
-        $mediaList = Media::where('type', $type)->paginate(9);
-        return view('admin.media.index', compact('mediaList', 'type'));
+        $mediaList = Media::where('type', $type)->paginate(10);
+        return view('admin.media.index', compact('mediaList'));
     }
 
     public function videoList()
     {
         $type = 'video';
-        $mediaList = Media::where('type', $type)->paginate(9);
-        return view('admin.media.index', compact('mediaList', 'type'));
+        $mediaList = Media::where('type', $type)->paginate(10);
+        return view('admin.media.index', compact('mediaList'));
+    }
+
+    public function index()
+    {
+        $mediaList = Media::paginate(10);
+        return view('admin.media.index', compact('mediaList'));
     }
 
     /**
@@ -28,7 +34,7 @@ class MediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+     public function create()
     {
         return view('admin.media.create');
     }

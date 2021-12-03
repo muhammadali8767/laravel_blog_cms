@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\StaticPage;
+use App\Models\Media;
 use Illuminate\Database\Seeder;
 
-class StaticPageSeeder extends Seeder
+class MediaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class StaticPageSeeder extends Seeder
      */
     public function run()
     {
-        StaticPage::factory()->times(20)->create();
+        Media::factory()->times(30)->create();
     }
 }

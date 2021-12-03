@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContacCreateRequest;
 use App\Models\Contact;
+use App\Models\Media;
 use App\Models\Post;
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
@@ -68,7 +69,9 @@ class FrontController extends Controller
 
     public function multimedia()
     {
-        return view('front.multimedia');
+        $photos = Media::where('type', 'photo')->limit(9)->get();
+        $videos = Media::where('type', 'video')->limit(9)->get();
+        return view('front.multimedia', compact('photos', 'videos'));
     }
 
     public function contact()
