@@ -83,7 +83,7 @@
                     <ul class="row ">
 
                         <li>
-                            <a href="#!">@lang('footer.САЙТ ҲАҚИДА')</a>
+                            <a href="{{ route('about') }}">@lang('footer.САЙТ ҲАҚИДА')</a>
                         </li>
                         <li>
                             <a href="#!">@lang('footer.САЙТ ХАРИТАСИ')</a>
