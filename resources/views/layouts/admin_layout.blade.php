@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8">
@@ -20,198 +20,17 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+    <!-- wrapper -->
     <div class="wrapper">
-        <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-                            class="fas fa-bars"></i></a>
-                </li>
-            </ul>
 
-            <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
-                <form action="{{ route('logout') }}" method="post">
-                    @csrf
-                    <button class="btn btn-link" type="submit">Выход</button>
-                </form>
-            </ul>
-        </nav>
-        <!-- /.navbar -->
+        <!-- Navbar -->
+        @include('layouts.components.admin.header')
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <a href="{{ route('homeAdmin') }}" class="brand-link">
-                <img src="/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">{{ config('app.name', 'Админ панель') }}</span>
-            </a>
-
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                    </div>
-                    <div class="info">
-                        <a href="{{ route('users.show', Auth::user()) }}"
-                            class="d-block">{{ Auth::user()->name }}</a>
-                    </div>
-                </div>
-
-
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
-
-                        <li class="nav-item">
-                            <a href="{{ route('homeAdmin') }}" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Главная</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-align-left"></i>
-                                <p>Категории<i class="right fas fa-angle-left"></i></p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('category.index') }}" class="nav-link">
-                                        <p>Все категории</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('category.create') }}" class="nav-link">
-                                        <p>Добавить категорию</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-pen-alt"></i>
-                                <p>Блог<i class="right fas fa-angle-left"></i></p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('post.index') }}" class="nav-link">
-                                        <p>Все статьи</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('post.create') }}" class="nav-link">
-                                        <p>Добавить статью</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-icons"></i>
-                                <p>Медиа<i class="right fas fa-angle-left"></i></p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('photoList') }}" class="nav-link">
-                                        <p>Все фотографии</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('videoList') }}" class="nav-link">
-                                        <p>Все видео</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('media.create') }}" class="nav-link">
-                                        <p>Добавить медиа</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>Страницы<i class="right fas fa-angle-left"></i></p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('pages.index') }}" class="nav-link">
-                                        <p>Все страницы</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('pages.create') }}" class="nav-link">
-                                        <p>Добавить страницу</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>Ползователи<i class="right fas fa-angle-left"></i></p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ route('users.index') }}" class="nav-link">
-                                        <p>Все ползователи</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('users.create') }}" class="nav-link">
-                                        <p>Добавить ползователя</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ route('contact.index') }}" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>Заявки</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-                <!-- /.sidebar-menu -->
-            </div>
-            <!-- /.sidebar -->
-        </aside>
+        @include('layouts.components.admin.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <div class="container-fluid">
-                @if (session('success'))
-                    <br>
-                    <div class="alert alert-success" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-check"></i>{{ session('success') }}</h4>
-                    </div>
-                @endif
-                @if ($errors->any())
-                    <br>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">Close</span>
-                        </button>
-                        <ul>
-                            {!! implode('', $errors->all('<li>:message</li>')) !!}
-                        </ul>
-                    </div>
-                @endif
-            </div>
             @yield('content')
         </div>
         <!-- /.content-wrapper -->

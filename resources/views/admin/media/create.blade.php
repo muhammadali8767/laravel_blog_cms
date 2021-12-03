@@ -19,12 +19,7 @@
                 </div>
 
             </div><!-- /.row -->
-            @if (session('success'))
-                <div class="alert alert-success" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h4><i class="icon fa fa-check"></i>{{ session('success') }}</h4>
-                </div>
-            @endif
+            @include('layouts.components.admin.message')
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -41,24 +36,30 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Заголовок</label>
-                                    <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Kategoriya nomini kiriting" required>
+                                    <input type="text" name="title" class="form-control" value="{{ old('title') }}"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label>Тип</label>
-                                    <select name="type" class="form-control">
+                                    <select name="type" id="mediaType" class="form-control" required>
                                         <option value="photo">Фото</option>
                                         <option value="video">Видео</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Медиа</label>
-                                    <img src="" alt="" class="img-uploaded" style="display: block; width: 300px">
+                                    <img class="img-uploaded" style="display: block; width: 300px">
+                                    <video class="video-uploaded" style="display: block; width: 300px" controls></video>
+                                    <br>
                                     <input type="text" name="media"
-                                        class="form-control @error('password') is-invalid @enderror" id="feature_image"
-                                        name="feature_image" value="" readonly>
+                                        class="form-control
+                                        @error('password') is-invalid @enderror"
+                                        id="feature_image" name="feature_image" value="" readonly>
+
                                     <div class="invalid-feedback">
                                         Please fill a valid data.
                                     </div>
+
                                     @error('media')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
