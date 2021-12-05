@@ -7,10 +7,10 @@
         <div class="container">
             <div class="row d-flex align-items-center justify-content-between pb-60">
                 <div class="col-12 col-md-6 p-3 p-md-0 about__col">
-                    <img class="img-fluid" src="/images/unsplash_pAtA8xe_iVM.png" alt="">
+                    <img class="img-fluid" style="min-height: 500px; object-fit: cover; object-position: 0 0;" src="{{ $homePage->image }}">
                 </div>
                 <div class="col-12 col-md-6  pl-md-4 about__col">
-                    <p class="green_text">@lang('contact.about')</p>
+                    <p class="green_text">{{ $homePage->title }}</p>
                     <h3>@lang('contact.about_title')</h3>
                     <p class="about_index__text">{!! $homePage->text !!}</p>
                     <a href="{{ route('page', 'biz-haqimizda') }}">@lang('contact.Батафсил...')</a>
@@ -114,7 +114,7 @@
             <div class="row">
                 <div class="col-12 col-md-6 mb-4 mb-md-0 big__news">
                     <div class="big__news__photos">
-                        <img class="img-fluid" src="{{ $lastPost->img }}">
+                        <img class="img-fluid" style="object-fit: cover;" src="{{ $lastPost->img }}">
                         <div class="shadow">
                             <a href="{{ route('category_post', [$lastPost->category->slug, $lastPost->slug]) }}">Batafsil</a>
                         </div>

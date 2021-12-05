@@ -13,13 +13,13 @@
                                 <a href="{{ route('page', 'biz-haqimizda') }}">@lang('menu.about')</a>
                             </li>
                             <li>
-                                <a href="{{ route('territory') }}">@lang('menu.direction') </a>
+                                <a href="{{ route('page', 'sirdaryo-eiz-direkciyasi') }}">@lang('menu.direction') </a>
                             </li>
                             <li>
-                                <a href="{{ route('eiz-vazifasi') }}">@lang('menu.functions')</a>
+                                <a href="{{ route('page', 'sirdaryo-eiz-mamurii-kengasi') }}">@lang('menu.functions')</a>
                             </li>
                             <li>
-                                <a href="{{ route('sirdaryo-eiz-mk') }}">@lang('menu.council') </a>
+                                <a href="{{ route('page', 'sirdaryo-eizning-vazifalari') }}">@lang('menu.council') </a>
                             </li>
 
                         </ul>
@@ -34,14 +34,14 @@
                                 <a href="{{ route('page', 'nima-ucun-sirdaryo-eiz') }}">@lang('menu.why')</a>
                             </li>
                             <li>
-                                <a href="{{ route('privilege') }}">@lang('menu.preferences')</a>
+                                <a href="{{ route('page', 'imtiyoz-va-prefereciyalar') }}">@lang('menu.preferences')</a>
                             </li>
                             <li>
-                                <a href="{{ route('activity_types') }}">@lang('menu.types of activities')</a>
+                                <a href="{{ route('page', 'sirdaryo-eizda-faoliyat-turlari') }}">@lang('menu.types of activities')</a>
 
                             </li>
                             <li>
-                                <a href="{{ route('project') }}">@lang('menu.successful projects')</a>
+                                <a href="{{ route('page', 'muvofaqqiyatli-loiialar') }}">@lang('menu.successful projects')</a>
 
                             </li>
 
