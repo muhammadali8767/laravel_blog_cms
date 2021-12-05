@@ -14,10 +14,10 @@
         <div class="main">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-md-4">
                         @include('layouts.components.left_sidebar')
                     </div>
-                    <div class="col-12 col-md-7">
+                    <div class="col-12 col-md-8">
                         <p>{!! $page->text !!}</p>
                     </div>
                 </div>

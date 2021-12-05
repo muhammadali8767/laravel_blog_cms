@@ -8,18 +8,16 @@ use App\Models\Media;
 use App\Models\Post;
 use App\Models\StaticPage;
 use App\Repositories\PostRepository;
-use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
     public function index()
     {
-        $homePage = StaticPage::where('slug', 'biz-haqimizda')->first();
+        $about = StaticPage::where('slug', 'biz-haqimizda')->first();
+        $lastPost = Post::orderBy('created_at', 'DESC')->with('category')->first();
+        $posts = Post::orderBy('created_at', 'DESC')->where('id', '!=', $lastPost->id)->with('category')->limit(4)->get();
 
-        $lastPost = Post::orderBy('created_at', 'DESC')->first();
-        $posts = Post::orderBy('created_at', 'DESC')->where('id', '!=', $lastPost->id)->limit(4)->get();
-
-        return view('front.index', compact('homePage', 'lastPost', 'posts'));
+        return view('front.index', compact('about', 'lastPost', 'posts'));
     }
 
     public function about()
@@ -69,7 +67,8 @@ class FrontController extends Controller
 
     public function news()
     {
-        $posts = Post::orderBy('created_at', 'DESC')->paginate(9);
+        $posts = Post::orderBy('created_at', 'DESC')->with('category')->paginate(9);
+
         return view('front.news', compact('posts'));
     }
 
@@ -77,6 +76,7 @@ class FrontController extends Controller
     {
         $photos = Media::where('type', 'photo')->limit(9)->get();
         $videos = Media::where('type', 'video')->limit(9)->get();
+
         return view('front.multimedia', compact('photos', 'videos'));
     }
 
