@@ -2,27 +2,27 @@
     <h4>@lang('sidebar.Бўлимда')</h4>
     <ul>
         <li>
-            <a href="{{ route('bussiness') }}" @if (Route::is('bussiness')) class="active" @endif>
+            <a href="{{ route('page', 'biznesni-qandai-boslaiman') }}">
                 @lang('menu.start_business')
             </a>
         </li>
         <li>
-            <a href="{{ route('why') }}" @if (Route::is('why')) class="active" @endif>
+            <a href="{{ route('page', 'nima-ucun-sirdaryo-eiz') }}">
                 @lang('menu.why')
             </a>
         </li>
         <li>
-            <a href="{{ route('privilege') }}" @if (Route::is('privilege')) class="active" @endif>
+            <a href="{{ route('page', 'imtiyoz-va-prefereciyalar') }}">
                 @lang('menu.preferences')
             </a>
         </li>
         <li>
-            <a href="{{ route('project') }}" @if (Route::is('project')) class="active" @endif>
+            <a href="{{ route('page', 'muvofaqqiyatli-loiialar') }}">
                 @lang('menu.successful projects')
             </a>
         </li>
         <li>
-            <a href="{{ route('activity_types') }}" @if (Route::is('activity_types')) class="active" @endif>
+            <a href="{{ route('page', 'sirdaryo-eizda-faoliyat-turlari') }}">
                 @lang('menu.types of activities')
             </a>
         </li>
@@ -43,31 +43,31 @@
     <h5>@lang('sidebar.Фойдали ҳаволалар')</h5>
     <ul>
         <li>
-            <a href="#!">
-                <img src="/images/oliy.jpg" alt="jpg">
+            <a href="http://president.uz/">
+                <img src="/images/gerb.png">
                 <span>
-                    Ўзбекистон Республикаси Давлат солиқ қўмитас</span>
+                    Ўзбекистон Республикаси Президентининг расмий веб-сайти</span>
             </a>
         </li>
         <li>
-            <a href="#!">
-                <img src="/images/oliy.jpg" alt="jpg">
+            <a href="http://www.gov.uz">
+                <img src="/images/gov.png">
                 <span>
-                    Ўзбекистон Республикаси Давлат солиқ қўмитас</span>
+                    O`zbekiston Respublikasi hukumat portali</span>
             </a>
         </li>
         <li>
-            <a href="#!">
-                <img src="/images/oliy.jpg" alt="jpg">
+            <a href="http://www.press-service.uz">
+                <img src="/images/press-service.png">
                 <span>
-                    Ўзбекистон Республикаси Давлат солиқ қўмитас</span>
+                    O`zbekiston Respublikasi Prezidentining matbuot xizmati</span>
             </a>
         </li>
         <li>
-            <a href="#!">
-                <img src="/images/oliy.jpg" alt="jpg">
+            <a href="http://my.gov.uz">
+                <img src="/images/my-gov.png">
                 <span>
-                    Ўзбекистон Республикаси Давлат солиқ қўмитас</span>
+                    Yagona interaktiv davlat xizmatlari portali</span>
             </a>
         </li>
     </ul>

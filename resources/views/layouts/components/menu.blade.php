@@ -10,7 +10,7 @@
                         <i class="fas fa-chevron-right d-inline d-lg-none"></i>  @lang('menu.about')
                         <ul class="dropdown__menu">
                             <li>
-                                <a href="{{ route('about') }}">@lang('menu.about')</a>
+                                <a href="{{ route('page', 'biz-haqimizda') }}">@lang('menu.about')</a>
                             </li>
                             <li>
                                 <a href="{{ route('territory') }}">@lang('menu.direction') </a>
@@ -28,11 +28,10 @@
                         <i class="fas fa-chevron-right d-inline d-lg-none"></i>  @lang('menu.business')
                         <ul class="dropdown__menu">
                             <li>
-                                <a href="{{ route('bussiness') }}">@lang('menu.start_business')</a>
+                                <a href="{{ route('page', 'biznesni-qandai-boslaiman') }}">@lang('menu.start_business')</a>
                             </li>
                             <li>
-                                <a href="{{ route('why') }}">@lang('menu.why')</a>
-
+                                <a href="{{ route('page', 'nima-ucun-sirdaryo-eiz') }}">@lang('menu.why')</a>
                             </li>
                             <li>
                                 <a href="{{ route('privilege') }}">@lang('menu.preferences')</a>

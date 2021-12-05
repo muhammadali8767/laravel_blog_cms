@@ -60,7 +60,7 @@
                                     </td>
                                     <td>
                                         <a href="{{ route('page', $page->slug) }}">
-                                            {{ route('page', $page->slug) }}
+                                            {{ $page->slug }}
                                         </a>
                                     </td>
                                     <td>

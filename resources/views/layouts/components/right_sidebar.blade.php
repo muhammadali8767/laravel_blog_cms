@@ -9,18 +9,18 @@
 </div>
 <h5 class="news__inner-title">@lang('sidebar.Фойдали ҳаволалар')</h5>
 <div class="useful__link">
-    <img class="useful__link_img rounded" src="/images/useful_link_img.png" alt="">
-    <a class="useful__link_link" href="#">Номзодлар, ҳокимлар ва бошқа машҳурлар овоз бермоқда</a>
+    <img class="useful__link_img rounded" src="/images/sirdaryo.gov.png" alt="">
+    <a class="useful__link_link" href="http://sirdaryo.gov.uz">Sirdаryo vilоyati hоkimiyati</a>
 </div>
 <div class="useful__link">
-    <img class="useful__link_img rounded" src="/images/useful_link_img.png" alt="">
-    <a class="useful__link_link" href="#">Номзодлар, ҳокимлар ва бошқа машҳурлар овоз бермоқда</a>
+    <img class="useful__link_img rounded" src="/images/gerb.png" alt="">
+    <a class="useful__link_link" href="http://www.mvd.uz">O'zbеkiston Rеspublikаsi Ichki ishlаr vаzirligi</a>
 </div>
 <div class="useful__link">
-    <img class="useful__link_img rounded" src="/images/useful_link_img.png" alt="">
-    <a class="useful__link_link" href="#">Номзодлар, ҳокимлар ва бошқа машҳурлар овоз бермоқда</a>
+    <img class="useful__link_img rounded" src="/images/gerb.png" alt="">
+    <a class="useful__link_link" href="http://www.mineconomy.uz">O'zbekiston Respublikasi iqtisodiyot va sanoat vazirligi</a>
 </div>
-<h5 class="news__inner-title mt-5 mb-4">@lang('sidebar.Бўлимлар')</h5>
+{{-- <h5 class="news__inner-title mt-5 mb-4">@lang('sidebar.Бўлимлар')</h5>
 <ul>
     <li>» Бўлим номи</li>
     <li>» Бўлим номи</li>
@@ -29,8 +29,8 @@
     <li>» Бўлим номи</li>
     <li>» Бўлим номи</li>
     <li>» Бўлим номи</li>
-</ul>
-<h5 class="news__inner-title mt-5 mb-3 keywords">@lang('sidebar.Калит сўзлар')</h5>
+</ul> --}}
+{{-- <h5 class="news__inner-title mt-5 mb-3 keywords">@lang('sidebar.Калит сўзлар')</h5>
 <div class="keywords ">
     <a href="#">Калит сўз</a>
     <a href="#">Калит сўз</a>
@@ -44,4 +44,4 @@
     <a href="#">Калит сўз</a>
     <a href="#">Калит сўз</a>
 
-</div>
+</div> --}}

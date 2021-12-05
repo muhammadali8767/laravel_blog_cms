@@ -35,10 +35,10 @@
                         <ul>
                             <li>
 
-                                <a href="{{ route('bussiness') }}">@lang('menu.start_business')</a>
+                                <a href="{{ route('page', 'biznesni-qandai-boslaiman') }}">@lang('menu.start_business')</a>
                             </li>
                             <li><a href="{{ route('activity_types') }}">@lang('menu.types of activities') </a></li>
-                            <li><a href="{{ route('why') }}">@lang('menu.why')</a></li>
+                            <li><a href="{{ route('page', 'nima-ucun-sirdaryo-eiz') }}">@lang('menu.why')</a></li>
 
                         </ul>
                     </div>

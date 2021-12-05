@@ -6,7 +6,7 @@
                 <p>Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона
                     жамоамизга қўнғироқ қилинг.</p>
                 <div class="slider__btns">
-                    <a class="more_info" href="{{ route('bussiness') }}">Батафсил</a>
+                    <a class="more_info" href="{{ route('page', 'biznesni-qandai-boslaiman') }}">Батафсил</a>
                     <a class="contact__btn" href="{{ route('contact') }}">Боғланиш</a>
                 </div>
             </div>
@@ -15,7 +15,7 @@
                 <p>Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона
                     жамоамизга қўнғироқ қилинг.</p>
                 <div class="slider__btns">
-                    <a class="more_info" href="{{ route('bussiness') }}">Батафсил</a>
+                    <a class="more_info" href="{{ route('page', 'biznesni-qandai-boslaiman') }}">Батафсил</a>
                     <a class="contact__btn" href="{{ route('contact') }}">Боғланиш</a>
                 </div>
             </div>

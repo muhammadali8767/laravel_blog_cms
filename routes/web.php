@@ -58,6 +58,7 @@ Route::namespace('App\Http\Controllers')
         Route::get('news', 'FrontController@news')->name('news');
         Route::get('multimedia', 'FrontController@multimedia')->name('multimedia');
         Route::get('contact', 'FrontController@contact')->name('contact');
+        Route::post('contact', 'FrontController@post_contact')->name('post-contact');
 
         Route::get('home', 'HomeController@index')->name('home');
         Route::get('page/{slug}', 'HomeController@page')->name('page');

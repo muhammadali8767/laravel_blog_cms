@@ -6,6 +6,7 @@ use App\Http\Requests\ContacCreateRequest;
 use App\Models\Contact;
 use App\Models\Media;
 use App\Models\Post;
+use App\Models\StaticPage;
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,12 @@ class FrontController extends Controller
 {
     public function index()
     {
-        return view('front.index');
+        $homePage = StaticPage::where('slug', 'biz-haqimizda')->first();
+
+        $lastPost = Post::orderBy('created_at', 'DESC')->first();
+        $posts = Post::orderBy('created_at', 'DESC')->where('id', '!=', $lastPost->id)->limit(4)->get();
+
+        return view('front.index', compact('homePage', 'lastPost', 'posts'));
     }
 
     public function about()
