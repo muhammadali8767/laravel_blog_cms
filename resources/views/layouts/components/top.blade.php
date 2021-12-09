@@ -46,47 +46,37 @@
             </div>
         </div>
         <div class="row header__weather-money justify-content-end">
-            <div class="col-12 col-md-9 col-lg-4">
-                <div class="row align-items-center">
-                    <div class="col-3 d-flex justify-content-center align-items-center justify-content-md-end text-right">
+            <div class="col-12 col-md-9 col-lg-4 d-flex text-lg-right justify-content-end align-items-center">
                         {{-- <i class="fas fa-cloud-meatball weather-logo"></i> --}}
-                        <div class="weather">
-                            <p>+17 <span>C<sup>o</sup></span></p>
-                            <div class="dropdown">
-                                <button class="btn weather-dropdown-btn dropdown-toggle" type="button"
-                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Uzbekiston
-                                </button>
-                               
-                            </div>
-                        </div>
+                <div class="weather">
+                    <p>+17 <span>C<sup>o</sup></span></p>
+                    <div class="dropdown">
+                        <button class="btn weather-dropdown-btn dropdown-toggle" type="button"
+                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Uzbekiston
+                        </button>
+                        
                     </div>
-                    <div class="col-3 text-right">
-                        <div class="dropdown">
-                            <button class="btn money-btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                USD
-                            </button>
-                            <div class="dropdown-menu money-dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Rubl</a>
-                                <a class="dropdown-item" href="#">Dollar</a>
-                                <a class="dropdown-item" href="#">EVRO</a>
-                                <a class="dropdown-item" href="#">Yuan</a>
-                            </div>
-                        </div>
+                </div>
+                <div class="dropdown ml-5">
+                    <button class="btn money-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        USD
+                    </button>
+                    <div class="dropdown-menu money-dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Rubl</a>
+                        <a class="dropdown-item" href="#">Dollar</a>
+                        <a class="dropdown-item" href="#">EVRO</a>
+                        <a class="dropdown-item" href="#">Yuan</a>
                     </div>
-                    <div class="col-3 text-right">
-                        <div class="purchase money-degree">
-                          
-                            <h5>1$  </h5>
-                        </div>
-                    </div>
-                    <div class="col-3 text-right">
-                        <div class="sell money-degree">
-                            <h5>1000 sum</h5>
-                        </div>
-                    </div>
+                </div>
+                <div class="purchase money-degree ml-5">
+                    
+                    <h5>1$  </h5>
+                </div>
+                <div class="sell money-degree ml-5">
+                    <h5>1000 sum</h5>
                 </div>
             </div>
         </div>

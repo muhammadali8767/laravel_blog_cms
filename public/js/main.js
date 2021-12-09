@@ -8,6 +8,9 @@ if(window.innerWidth > 992){
     $('.dropdown .btn').on('mouseover', function(){
         $(this).next().fadeIn("slow");
     })
+    $('.dropdown .btn').on('mouseleave', function(){
+        $(this).next().fadeOut();
+    })
 } else {
     $('.dropdown__parent').on('click', function() {
         $(this).children().fadeToggle();
@@ -15,7 +18,6 @@ if(window.innerWidth > 992){
     $('.dropdown .btn').on('click', function(){
         $(this).next().fadeToggle();
     })
-    // if()
 }
 window.addEventListener('load',function(){
     // document.querySelector('.dropdown__parent').addEventListener('mouseover', function () {
@@ -114,13 +116,13 @@ $(document).ready(function () {
         }, 1000);
     })
     // ALL DROPDOWN MENU CODES
-    $('.dropdown .btn').on('mouseleave', function(){
-        $(this).next().fadeOut();
-    })
-    $('.dropdown .btn').next().on('mousemove', function(){
-        $(this).fadeIn("fast");
-    })
-    $('.dropdown .btn').next().on('mouseleave', function(){
-        $(this).fadeOut();
-    })
+    // $('.dropdown .btn').on('mouseleave', function(){
+    //     $(this).next().fadeOut();
+    // })
+    // $('.dropdown .btn').next().on('mousemove', function(){
+    //     $(this).fadeIn("fast");
+    // })
+    // $('.dropdown .btn').next().on('mouseleave', function(){
+    //     $(this).fadeOut();
+    // })
 })
