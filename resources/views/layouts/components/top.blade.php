@@ -1,8 +1,8 @@
-<div class="container ">
+<div class="container-fluid ">
     <div class="row header__logo__address align-items-center mb-2 mb-md-0">
         <div class="col-6 col-md-4">
             <a href="{{ route('main') }}">
-                <img src="/images/logouzb.png" alt="" class="logo">
+                <img src="/images/logo.png" alt="" class="logo">
                 СИРДАРЁ ЭРКИН ИКТИСОДИЙ ЗОНАСИ ДИРЕКЦИЯСИ
             </a>
         </div>
@@ -49,8 +49,8 @@
         <div class="row header__weather-money justify-content-end">
             <div class="col-12 col-md-9 col-lg-6">
                 <div class="row align-items-center">
-                    <div class="col-3 d-flex align-items-center justify-content-md-end text-right">
-                        <i class="fas fa-cloud-meatball weather-logo"></i>
+                    <div class="col-3 d-flex justify-content-center align-items-center justify-content-md-end text-right">
+                        {{-- <i class="fas fa-cloud-meatball weather-logo"></i> --}}
                         <div class="weather">
                             <p>+17 <span>C<sup>o</sup></span></p>
                             <div class="dropdown">
@@ -79,7 +79,7 @@
                     <div class="col-3 text-right">
                         <div class="purchase money-degree">
                           
-                            <h5>1$ doller </h5>
+                            <h5>1$  </h5>
                         </div>
                     </div>
                     <div class="col-3 text-right">

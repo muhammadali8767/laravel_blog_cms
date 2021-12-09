@@ -39,9 +39,10 @@ body {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  max-width: 70px;
+  height: 70px;
   margin-right: 10px;
+  font-size: 200px;
 }
 
 .header__logo__address a {
@@ -116,7 +117,7 @@ body {
 
 .header__weather-money .money-dropdown-menu a:hover {
   color: #fff;
-  background-color: #1EB53A;
+  background-color: #2E8EDA;
 }
 
 .header__weather-money .money-degree p {
@@ -320,10 +321,10 @@ body {
 
 .main__menu ul .dropdown__parent .dropdown__menu li a {
   padding: 0;
-  color: #111111;
+  color: #555;
   text-transform: capitalize;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .office_phone {
@@ -1653,7 +1654,7 @@ footer .footer__line .text span {
     height: 50px;
   }
   .logo {
-    width: 180px;
+    max-width: 180px;
   }
   header .globus__img .contact__address-contact-text {
     top: 40px;
@@ -1674,6 +1675,9 @@ footer .footer__line .text span {
   header .globus__img img {
     max-width: 100%;
     height: 300px;
+  }
+  header .header__logo__address a {
+    font-size: 10px;
   }
   header .header__logo__address .header__logo__address-icon-lang i {
     margin: 0 4px;

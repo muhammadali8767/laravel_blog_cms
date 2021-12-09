@@ -36,9 +36,10 @@ body {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    max-width: 70px;
+    height: 70px;
     margin-right: 10px;
+    font-size: 200px;
 }
 .header__logo__address {
     a{
@@ -47,18 +48,11 @@ body {
         align-items: center;
         text-decoration: none;
         font-weight: 700;
+        
     }
    
 }
-// .header_menu-fixed{
-//     position: fixed;
-//     top: 0;
-//     width: 100%;
-//     margin-bottom: 200px !important;
-//     background-color: #283a5ec7;
-//     z-index: 999;
-   
-// }
+
 
 
 .header__weather-money{
@@ -118,7 +112,7 @@ body {
             padding: 4px 12px;
             &:hover{
                 color: #fff;
-                background-color: #1EB53A;
+                background-color: #2E8EDA;
             }
         }
     }
@@ -299,10 +293,10 @@ body {
                         border-bottom: 1px solid #d9dadd;
                         a{
                             padding: 0;
-                            color: rgb(17, 17, 17);
+                            color: #555;
                             text-transform: capitalize;
                             font-size: 12px;
-                            font-weight: 600;
+                            font-weight: 400;
                         }
                     }
                 }
@@ -1542,6 +1536,7 @@ footer {
     }
 }
 @media(max-width: 767px){
+
     .lang-dropdown-menu{
         padding: 0.25rem 0;
         a{
@@ -1554,7 +1549,7 @@ footer {
         height: 50px;
     }
     .logo{
-        width: 180px;
+        max-width: 180px;
     }
     header {
          // contact page
@@ -1586,6 +1581,9 @@ footer {
           }
        
         .header__logo__address {
+            a{
+                font-size: 10px;
+            }
             .header__logo__address-icon-lang{
                 i{
                     margin: 0 4px;
