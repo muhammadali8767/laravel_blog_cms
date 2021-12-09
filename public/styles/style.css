@@ -39,10 +39,10 @@ body {
 }
 
 .logo {
-  max-width: 70px;
-  height: 70px;
+  max-width: 90px;
+  height: 90px;
   margin-right: 10px;
-  font-size: 200px;
+  font-size: 24px;
 }
 
 .header__logo__address a {
@@ -51,10 +51,6 @@ body {
   align-items: center;
   text-decoration: none;
   font-weight: 700;
-}
-
-.header__weather-money {
-  padding-bottom: 20px;
 }
 
 .header__weather-money .weather-logo {
@@ -152,7 +148,7 @@ body {
 }
 
 .header__logo__address {
-  padding: 25px 0;
+  padding: 25px 0 0;
 }
 
 .header__logo__address-icon-lang {

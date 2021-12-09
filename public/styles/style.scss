@@ -36,10 +36,10 @@ body {
 }
 
 .logo {
-    max-width: 70px;
-    height: 70px;
+    max-width: 90px;
+    height: 90px;
     margin-right: 10px;
-    font-size: 200px;
+    font-size: 24px;
 }
 .header__logo__address {
     a{
@@ -56,7 +56,7 @@ body {
 
 
 .header__weather-money{
-    padding-bottom: 20px;
+   
     .weather-logo{
         color: #F8B62D;
         margin-right: 5px;
@@ -150,7 +150,7 @@ body {
     }
 }
 .header__logo__address {
-    padding: 25px 0;
+    padding: 25px 0 0;
 }
 .header__logo__address-icon-lang {
     display: flex;

@@ -8,7 +8,6 @@
         </div>
         <div class="col-6 col-md-8">
             <div class="row align-items-center header__logo__address-icon-lang">
-               
                 <div class="col-12 col-md-4 col-lg-3">
                     <div class="dropdown d-inline-block">
                         <button class="btn  dropdown-toggle btn__lang" type="button" id="dropdownMenuButton"
@@ -47,7 +46,7 @@
             </div>
         </div>
         <div class="row header__weather-money justify-content-end">
-            <div class="col-12 col-md-9 col-lg-6">
+            <div class="col-12 col-md-9 col-lg-4">
                 <div class="row align-items-center">
                     <div class="col-3 d-flex justify-content-center align-items-center justify-content-md-end text-right">
                         {{-- <i class="fas fa-cloud-meatball weather-logo"></i> --}}
@@ -71,8 +70,9 @@
                             </button>
                             <div class="dropdown-menu money-dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#">Rubl</a>
-                                <a class="dropdown-item" href="#">UZS</a>
+                                <a class="dropdown-item" href="#">Dollar</a>
                                 <a class="dropdown-item" href="#">EVRO</a>
+                                <a class="dropdown-item" href="#">Yuan</a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,6 @@
                     </div>
                     <div class="col-3 text-right">
                         <div class="sell money-degree">
-                           
                             <h5>1000 sum</h5>
                         </div>
                     </div>
