@@ -4,8 +4,9 @@
         <div class="row justify-content-md-center justify-content-between ">
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="footer__logo">
-                    <a href="index.html">
-                        <img src="/images/Logo.png" alt="png" class="logo">
+                    <a href="index.html" class="footer__logo-img">
+                        <img src="/images/logouzb.png" alt="png" class="logo">
+                        СИРДАРЁ ЭРКИН ИКТИСОДИЙ ЗОНАСИ ДИРЕКЦИЯСИ
                     </a>
                     <p><span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш учун
                         мамлакат ва чет эл капиталини, юқори технология ва ...</p>
@@ -100,13 +101,13 @@
                 <p>@lang('footer.2010-2021')</p>
             </div>
             <div class="col-12 col-md-4 ">
-                <ul class="row  justify-content-lg-end social">
+                {{-- <ul class="row  justify-content-lg-end social">
                     <li>@lang('footer.Ижтимоий тармоқлар'):</li>
                     <li> <a href="#"><i class="fab fa-facebook"></i></a></li>
                     <li> <a href="#"><i class="fab fa-telegram-plane"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
-                </ul>
+                </ul> --}}
                 <p class="text">@lang('footer.sayt')<span> @lang('footer.ITLIVE') </span> @lang('footer.sayt')
                 </p>
             </div>

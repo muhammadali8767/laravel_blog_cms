@@ -2,15 +2,13 @@
     <div class="row header__logo__address align-items-center mb-2 mb-md-0">
         <div class="col-6 col-md-4">
             <a href="{{ route('main') }}">
-                <img src="/images/Logo.png" alt="" class="logo"></a>
+                <img src="/images/logouzb.png" alt="" class="logo">
+                СИРДАРЁ ЭРКИН ИКТИСОДИЙ ЗОНАСИ ДИРЕКЦИЯСИ
+            </a>
         </div>
         <div class="col-6 col-md-8">
             <div class="row align-items-center header__logo__address-icon-lang">
-                <div class="col-12 col-md-8 col-lg-9 text-right">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+               
                 <div class="col-12 col-md-4 col-lg-3">
                     <div class="dropdown d-inline-block">
                         <button class="btn  dropdown-toggle btn__lang" type="button" id="dropdownMenuButton"
@@ -59,14 +57,9 @@
                                 <button class="btn weather-dropdown-btn dropdown-toggle" type="button"
                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
-                                    Sirdaryo
+                                    Uzbekiston
                                 </button>
-                                <div class="dropdown-menu weather-dropdown-menu"
-                                    aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Jizzax</a>
-                                    <a class="dropdown-item" href="#">Samarqand</a>
-                                    <a class="dropdown-item" href="#">Toshkent</a>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -85,14 +78,14 @@
                     </div>
                     <div class="col-3 text-right">
                         <div class="purchase money-degree">
-                            <p>@lang('menu.Sotib olish')</p>
-                            <h5>10680.00 <i class="fas fa-sort-down"></i></h5>
+                          
+                            <h5>1$ doller </h5>
                         </div>
                     </div>
                     <div class="col-3 text-right">
                         <div class="sell money-degree">
-                            <p>@lang('menu.Sotish')</p>
-                            <h5>10745.00 <i class="fas fa-sort-up"></i></h5>
+                           
+                            <h5>1000 sum</h5>
                         </div>
                     </div>
                 </div>

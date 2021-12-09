@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #283A5E;
+    background-color: white;
 }
 .active{
     display: block;
@@ -19,14 +19,14 @@ body {
     position: fixed;
     right: 3%;
     bottom: 4%;
-    width: 50px;
-    height: 60px;
-    background: #1EB53A;
+    width: 40px;
+    height: 50px;
+    background: #2E8EDA;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    box-shadow: 0px 20px 44px rgba(30, 181, 58, 0.28);
+    box-shadow: 0px 20px 44px #2e8dda80;
     color: white;
     z-index: 999;
     cursor: pointer;
@@ -36,7 +36,19 @@ body {
 }
 
 .logo {
-    width: 250px;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+.header__logo__address {
+    a{
+        color: #2E8EDA;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 700;
+    }
+   
 }
 // .header_menu-fixed{
 //     position: fixed;
@@ -62,14 +74,14 @@ body {
             font-weight: 600;
             font-size: 16px;
             line-height: 19px;
-            color: #FFFFFF;
+            color: #2E8EDA;
         }
         .weather-dropdown-btn{
             padding: 0;
             font-weight: 500;
             font-size: 12px;
             line-height: 15px;
-            color: #FFFFFF;
+            color: #2E8EDA;
             &:focus{
                 box-shadow: none;
             }
@@ -90,7 +102,7 @@ body {
         background: rgba(255, 255, 255, 0.15);
         border-radius: 7px;
         padding: 11px 8px;
-        color: #fff;
+        color: #2E8EDA;
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
@@ -123,7 +135,7 @@ body {
             font-weight: 600;
             font-size: 16px;
             line-height: 19px;
-            color: #FFFFFF;
+            color: #2E8EDA;
             margin: 0;
             i{
                 font-size: 15px;
@@ -159,15 +171,15 @@ body {
         font-weight: 500;
         font-size: 14px;
         .dropdown-item:hover{
-            background-color: #1EB53A;
+            background-color: #2E8EDA;
             color: white;
         }
     }
     .btn{
         background-color: transparent;
-        border: 2px solid white;
+        border: 2px solid #2E8EDA;
         border-radius: 20px;
-        color: white;
+        color: #2E8EDA;
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
@@ -185,7 +197,7 @@ body {
 
 .main__menu {
     width: 100%;
-    background: #283A5E;
+    background: #2E8EDA;
     border-top: 2px solid rgba(255, 255, 255, 0.1);
     .menu__btn {
         color: #fff;
@@ -212,13 +224,14 @@ body {
             margin: 0 10px;
             a {
                 display: inline-block;
-                color: #fff;
-                font-size: 14px;
-                font-weight: 500;
+                color: white;
+                font-size: 12px;
+                font-weight: 700;
                 padding: 30px 0;
                 text-decoration: none;
                 position: relative;
                 transition: 0.5s;
+                text-transform: uppercase;
                 &::after {
                     content: '';
                     width: 100%;
@@ -226,7 +239,7 @@ body {
                     position: absolute;
                     top: -2px;
                     left: 0;
-                    background-color: #fff;
+                    background-color: black;
                     transition: 0.5s;
                     transform: scaleX(0);
                 }
@@ -240,9 +253,10 @@ body {
         }
         .dropdown__parent{
                 display: inline-block;
-                color: #fff;
-                font-size: 14px;
-                font-weight: 500;
+                text-transform: uppercase;
+                color: white;
+                font-size: 12px;
+                font-weight: 700;
                 margin-right: 0px;
                 padding: 30px 0;
                 text-decoration: none;
@@ -255,7 +269,7 @@ body {
                     position: absolute;
                     top: -2px;
                     left: 0;
-                    background-color: #fff;
+                    background-color: black;
                     transition: 0.5s;
                     transform: scaleX(0);
                 }
@@ -299,7 +313,7 @@ body {
 .office_phone {
     font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    color: white;
     text-decoration: none;
     &:hover{
         color: white;
@@ -310,7 +324,7 @@ body {
 .header__bg {
     height: auto;
     min-height: 500px;
-    background: linear-gradient(180deg, #283A5E, rgba(40, 58, 94, 0.49), #283A5E), url(../images/bg.jpg) no-repeat center center / cover;
+    background:  url('../images/Hero.png') no-repeat center center / cover;
     .slide{
         h1{
             font-weight: 700;
@@ -347,8 +361,8 @@ body {
                 }
             }
             .more_info{
-                border: 1px solid #1EB53A;
-                background: #1EB53A;
+                border: 1px solid white;
+                background: #2E8EDA;
                 margin-right: 13px;
             }
             .contact__btn{
@@ -378,7 +392,7 @@ body {
         .progress__line{
             width: 40%;
             height: 100%;
-            background-color: #1EB53A;
+            background-color: #2E8EDA;
         }
     }
     .afzallik{
@@ -387,7 +401,7 @@ body {
             font-weight: 700;
             font-size: 14px;
             line-height: 20px;
-            color: #1EB53A;
+            color: #2E8EDA;
             list-style: circle;
         }
     }
@@ -443,7 +457,7 @@ body {
                 font-size: 56px;
                 line-height: 82px;
                 text-align: center;
-                color: #1EB53A;
+                color: white;
                 margin-top: 50px;
             }
             p {
@@ -490,7 +504,7 @@ body {
         font-size: 20px;
     }
     .green_text {
-        color: #1EB53A;
+        color: #2E8EDA;
         font-size: 20px;
         font-weight: 700;
         position: relative;
@@ -500,7 +514,7 @@ body {
             content: '';
             width: 30px;
             height: 2px;
-            background-color: #1EB53A;
+            background-color: #2E8EDA;
             position: absolute;
             top: 50%;
             left: 0;
@@ -518,7 +532,7 @@ body {
         font-weight: 500;
     }
     a {
-        color: #1EB53A;
+        color: #2E8EDA;
         font-size: 20px;
         line-height: 32px;
         font-weight: 500;
@@ -536,7 +550,7 @@ body {
         padding: 30px 15px 40px;
         transition: 0.7s;
         &:hover {
-            background-color: #1EB53A;
+            background-color: #2E8EDA;
             cursor: default;
         }
         &:hover p {
@@ -556,7 +570,7 @@ body {
             position: relative;
             margin: 45px auto;
             .circle {
-                stroke: #1EB53A;
+                stroke: #2E8EDA;
                 fill: #fff;
                 transition: 0.7s;
             }
@@ -565,12 +579,12 @@ body {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                fill: #1EB53A;
+                fill: #2E8EDA;
                 transition: 0.7s;
             }
         }
         &:hover .circle {
-            fill: #1EB53A;
+            fill: #2E8EDA;
             stroke: #fff;
         }
         &:hover .resurs {
@@ -606,7 +620,7 @@ body {
             background-color: #fff;
             transition: 0.6s;
             &:hover {
-                background-color: #1EB53A;
+                background-color: #2E8EDA;
                 color: #fff;
             }
         }
@@ -628,7 +642,7 @@ body {
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-color: #1eb53ac2;
+                background-color: #2e8dda7a;
                 border-radius: 5px;
                 opacity: 0;
                 transition: 0.6s;
@@ -775,7 +789,7 @@ body {
             color: #A8A8A8;
         }
         button {
-            background: #1EB53A;
+            background: #2E8EDA;
             border-radius: 3px;
             font-weight: 500;
             font-size: 16px;
@@ -800,7 +814,7 @@ body {
             }
             i {
                 color: #fff;
-                background: #283A5E;
+                background: #2E8EDA;
                 border-radius: 50%;
                 padding: 13px;
                 margin-right: 9px;
@@ -883,6 +897,16 @@ body {
 // FOOTER
 footer {
     padding: 60px 0;
+    background-color: #2E8EDA;
+    .footer__logo-img{
+        display: flex;
+        align-items: center;
+        color: white;
+        font-weight: 700;
+        font-size: 11px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
     .footer__logo p {
         font-family: Montserrat;
         font-size: 14px;
@@ -893,14 +917,14 @@ footer {
         color: white;
         margin-top: 20px;
         span {
-            color: #1EB53A;
+            color: white;
         }
     }
     .more {
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
-        color: #1EB53A;
+        color: white;
         text-decoration: none;
     }
     h3 {
@@ -966,7 +990,7 @@ footer {
             }
         }
         p {
-            color: rgba(255, 255, 255, 0.47);
+            color: white;
             font-size: 12px;
             font-weight: 500;
         }
@@ -983,9 +1007,9 @@ footer {
             font-size: 14px;
             line-height: 27px;
             /* identical to box height, or 193% */
-            color: rgba(255, 255, 255, 0.47);
+            color: white;
             span {
-                color: #1EB53A;
+                color: black;
             }
         }
     }
@@ -994,7 +1018,7 @@ footer {
 // =========== NEWS ===========
 .news {
     width: 100%;
-    background-color: #283A5E;
+    background-color: #2E8EDA;
     text-align: center;
     padding: 50px 0;
     color: white;
@@ -1017,7 +1041,7 @@ footer {
         text-decoration: none;
     }
     a:last-of-type {
-        color: #1EB53A;
+        color: white;
     }
 }
 
@@ -1158,7 +1182,7 @@ footer {
         margin-bottom: 15px;
         i{
             font-size: 24px;
-            color: #2CBC63;
+            color: #2E8EDA;
             margin-right: 17px;
         }
     }
@@ -1234,7 +1258,7 @@ footer {
              text-decoration: none;
              transition: 500ms;
              &:hover{
-                background-color: #1EB53A;
+                background-color: #2E8EDA;
                 color: white;
              }
            
@@ -1298,7 +1322,7 @@ footer {
 
 .globus__img{
     height: auto !important;
-    background: #283A5E !important;
+    background: #2E8EDA !important;
     position: relative;
     img{
         height: 100vh;
@@ -1322,7 +1346,7 @@ footer {
             flex-wrap: wrap;
             ul{
                 width: 245px;
-                border-top: 1px solid rgba(255, 255, 255, 0.41);
+                border-top: 1px solid white;
                 padding-top: 9px;
                 &:nth-child(1){
                     margin-right: 35px;
@@ -1331,13 +1355,13 @@ footer {
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 32px;
-                    color: #BDC1D6;
+                    color: white;
                 }
                 .name{
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 32px;
-                    color: #1EB53A;
+                    color: black;
                 }
             }
         }
