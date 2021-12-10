@@ -1,25 +1,25 @@
-if(window.innerWidth > 992){
-    $('.dropdown__parent').on('mouseover', function() {
+if (window.innerWidth > 992) {
+    $('.dropdown__parent').on('mouseover', function () {
         $(this).children().fadeIn("fast");
     });
-    $('.dropdown__parent').on('mouseleave', function() {
+    $('.dropdown__parent').on('mouseleave', function () {
         $(this).children().fadeOut();
     })
-    $('.dropdown .btn').on('mouseover', function(){
-        $(this).next().fadeIn("slow");
-    })
-    $('.dropdown .btn').on('mouseleave', function(){
-        $(this).next().fadeOut();
-    })
+    // $('.dropdown .btn').on('mouseover', function(){
+    //     $(this).next().fadeIn("slow");
+    // })
+    // $('.dropdown .btn').on('mouseleave', function(){
+    //     $(this).next().fadeOut();
+    // })
 } else {
-    $('.dropdown__parent').on('click', function() {
+    $('.dropdown__parent').on('click', function () {
         $(this).children().fadeToggle();
     });
-    $('.dropdown .btn').on('click', function(){
+    $('.dropdown .btn').on('click', function () {
         $(this).next().fadeToggle();
     })
 }
-window.addEventListener('load',function(){
+window.addEventListener('load', function () {
     // document.querySelector('.dropdown__parent').addEventListener('mouseover', function () {
     //     document.querySelector('.dropdown__menu').classList.add('active');
     // });
@@ -126,3 +126,28 @@ $(document).ready(function () {
     //     $(this).fadeOut();
     // })
 })
+
+
+
+// ------- Weather --------------------------------------------------------------------
+
+// const city = "sirdaryo";
+const city = "uzbekistan";
+
+const apiKey = "4d8fb5b93d4af21d66a2948710284366";
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const { main, name} = data;
+        const markup = `
+            <p>${Math.round(main.temp)}<span>°C</span></p>
+            <p class="weather-dropdown-btn">${name}</p>
+        `;
+        const weatherDiv = document.querySelector(".weather");
+        weatherDiv.innerHTML = markup;
+    })
+    .catch((e) => {
+        console.log(e);
+    });

@@ -9,10 +9,9 @@
         <div class="col-6 col-md-8">
             <div class="row align-items-center header__logo__address-icon-lang">
                 <div class="col-12 col-md-4 col-lg-3">
-                    <div class="dropdown d-inline-block">
-                        <button class="btn  dropdown-toggle btn__lang" type="button" id="dropdownMenuButton"
-                            aria-expanded="false">
-                            {{-- check language --}}
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             @switch(app()->getLocale())
                                 @case('en')
                                     English
@@ -28,8 +27,7 @@
                                     @break
                                 @endswitch
                             </button>
-                            {{-- set language --}}
-                            <div class="dropdown-menu lang-dropdown-menu">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 @if (app()->getLocale() != 'uz')
                                     <a class="dropdown-item" href="?locale=uz">Ўзбекча</a>
                                 @endif
@@ -47,17 +45,16 @@
         </div>
         <div class="row header__weather-money justify-content-end">
             <div class="col-12 col-md-9 col-lg-4 d-flex text-lg-right justify-content-end align-items-center">
-                        {{-- <i class="fas fa-cloud-meatball weather-logo"></i> --}}
-                <div class="weather">
-                    <p>+17 <span>C<sup>o</sup></span></p>
+                {{-- <i class="fas fa-cloud-meatball weather-logo"></i> --}}
+                <div class="weather" id="weather">
+                    {{-- <p>+17 <span>C<sup>o</sup></span></p>
                     <div class="dropdown">
-                        <button class="btn weather-dropdown-btn dropdown-toggle" type="button"
-                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                        <button class="btn weather-dropdown-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Uzbekiston
                         </button>
-                        
-                    </div>
+
+                    </div> --}}
                 </div>
                 <div class="dropdown ml-5">
                     <button class="btn money-btn dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -72,8 +69,8 @@
                     </div>
                 </div>
                 <div class="purchase money-degree ml-5">
-                    
-                    <h5>1$  </h5>
+
+                    <h5>1$ </h5>
                 </div>
                 <div class="sell money-degree ml-5">
                     <h5>1000 sum</h5>
