@@ -140,14 +140,44 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${a
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        const { main, name} = data;
+        const { main, name } = data;
         const markup = `
             <p>${Math.round(main.temp)}<span>°C</span></p>
             <p class="weather-dropdown-btn">${name}</p>
         `;
-        const weatherDiv = document.querySelector(".weather");
-        weatherDiv.innerHTML = markup;
+        const weatherDiv = $('.weather');
+        weatherDiv.html(markup);
     })
     .catch((e) => {
         console.log(e);
     });
+
+// ------- Valyuta --------------------------------------------------------------------
+
+valyuta('usd');
+$('.valyuta').click(function(){ valyuta(this.dataset.val) });
+
+function valyuta(key) {
+    console.log(key);
+    fetch("/valyuta.json")
+    .then(response => response.json())
+    .then(data => {
+        const valyutaShow = $('.valyuta-show');
+        const valyutaName = $('.valyuta-name');
+
+        // const valyutaList = $('.valyuta-list');
+        // const valyutaLogo = $('.valyuta-logo');
+
+        valyutaName.html(data[key].Ccy);
+        valyutaShow.html(data[key].Rate + ' Сум');
+        // valyutaLogo.html(data[key].CcyNm_UZC);
+
+        // console.log(data[key]);
+    })
+    .catch((e) => {
+        console.log(e);
+    });
+
+}
+
+

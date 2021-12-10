@@ -1,4 +1,4 @@
-<div class="container-fluid ">
+<div class="container ">
     <div class="row header__logo__address align-items-center mb-2 mb-md-0">
         <div class="col-6 col-md-4">
             <a href="{{ route('main') }}">
@@ -57,23 +57,23 @@
                     </div> --}}
                 </div>
                 <div class="dropdown ml-5">
-                    <button class="btn money-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                    <button class="btn money-btn dropdown-toggle valyuta-name" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        USD
+
                     </button>
-                    <div class="dropdown-menu money-dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Rubl</a>
-                        <a class="dropdown-item" href="#">Dollar</a>
-                        <a class="dropdown-item" href="#">EVRO</a>
-                        <a class="dropdown-item" href="#">Yuan</a>
+                    <div class="dropdown-menu money-dropdown-menu valyuta-list" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item valyuta" href="#" data-val="rub">Россия рубли</a>
+                        <a class="dropdown-item valyuta" href="#" data-val="usd">АҚШ доллари</a>
+                        <a class="dropdown-item valyuta" href="#" data-val="eur">EВРО</a>
+                        <a class="dropdown-item valyuta" href="#" data-val="cny">Хитой юани</a>
                     </div>
                 </div>
-                <div class="purchase money-degree ml-5">
+                {{-- <div class="purchase money-degree ml-2">
 
-                    <h5>1$ </h5>
-                </div>
-                <div class="sell money-degree ml-5">
-                    <h5>1000 sum</h5>
+                    <h5 class="valyuta-logo"></h5>
+                </div> --}}
+                <div class="sell money-degree ml-2">
+                    <h5 class="valyuta-show"></h5>
                 </div>
             </div>
         </div>
