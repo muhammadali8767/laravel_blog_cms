@@ -41,8 +41,6 @@
         </div>
         <section class="container-fluid p-0 bg-white">
             <div class="container about__text">
-                <br>
-                <br>
                 <p>{!! $page->text !!}</p>
             </div>
         </section>

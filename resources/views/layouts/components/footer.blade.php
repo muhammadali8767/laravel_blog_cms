@@ -8,10 +8,9 @@
                         <img src="/images/logouzb.png" alt="png" class="logo">
                         СИРДАРЁ ЭРКИН ИКТИСОДИЙ ЗОНАСИ ДИРЕКЦИЯСИ
                     </a>
-                    <p><span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш учун
-                        мамлакат ва чет эл капиталини, юқори технология ва ...</p>
+                    <p><span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш ...</p>
 
-                    <a href="#!" class="more">Батафсил... </a>
+                    <a href="{{ route('about') }}" class="more">Батафсил... </a>
 
                 </div>
             </div>
@@ -41,7 +40,8 @@
                                 href="{{ route('page', 'biznesni-qandai-boslaiman') }}">@lang('menu.start_business')</a>
                         </li>
                         <li>
-                            <a href="{{ route('page', 'sirdaryo-eizda-faoliyat-turlari') }}">@lang('menu.types of activities') </a>
+                            <a href="{{ route('page', 'sirdaryo-eizda-faoliyat-turlari') }}">@lang('menu.types of
+                                activities') </a>
                         </li>
                         <li>
                             <a href="{{ route('page', 'nima-ucun-sirdaryo-eiz') }}">@lang('menu.why')</a>
@@ -98,7 +98,7 @@
                         <a href="{{ route('contact') }}">@lang('footer.ҚАЙТА АЛОҚА')</a>
                     </li>
                 </ul>
-                <p>@lang('footer.2010-2021')</p>
+                <p>@lang('footer.start-end', ['start' => 2010, 'end' => date('Y')])</p>
             </div>
             <div class="col-12 col-md-4 ">
                 {{-- <ul class="row  justify-content-lg-end social">
@@ -108,8 +108,12 @@
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
                 </ul> --}}
-                <p class="text">@lang('footer.sayt')<span> @lang('footer.ITLIVE') </span> @lang('footer.sayt')
+                <p class="text">
+                    @lang('footer.sayt', [
+                        'site' => '<a href="#" style="color:black">"IT LIVE"</a>']
+                    )
                 </p>
+
             </div>
         </div>
     </div>

@@ -45,7 +45,7 @@
                                 <th>
                                     Тип
                                 </th>
-                                <th style="width: 30%">
+                                <th>
                                 </th>
                             </tr>
                         </thead>

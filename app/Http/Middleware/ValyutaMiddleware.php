@@ -14,12 +14,14 @@ class ValyutaMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $valyuta['rub'] = Http::get('https://cbu.uz/ru/arkhiv-kursov-valyut/json/RUB/')->json()[0];
-        $valyuta['usd'] = Http::get('https://cbu.uz/ru/arkhiv-kursov-valyut/json/USD/')->json()[0];
-        $valyuta['eur'] = Http::get('https://cbu.uz/ru/arkhiv-kursov-valyut/json/EUR/')->json()[0];
-        $valyuta['cny'] = Http::get('https://cbu.uz/ru/arkhiv-kursov-valyut/json/CNY/')->json()[0];
+        $valyutaArray = Http::get('https://cbu.uz/ru/arkhiv-kursov-valyut/json')->json();
+        $valyuta['usd'] = $valyutaArray[0];
+        $valyuta['eur'] = $valyutaArray[1];
+        $valyuta['rub'] = $valyutaArray[2];
+        $valyuta['cny'] = $valyutaArray[14];
 
         file_put_contents('/valyuta.json', json_encode($valyuta));
+        // file_put_contents('/home/yuldash1/public_html/public/valyuta.json', json_encode($valyuta));
         // dd(file_get_contents('/valyuta.json'));
 
         return $next($request);

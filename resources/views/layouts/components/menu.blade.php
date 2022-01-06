@@ -53,8 +53,8 @@
                 </ul>
             </div>
             <div class="col-7 col-lg-3 d-flex justify-content-end">
-                <a class="office_phone" href="tel: +998998781731">
-                    +998 (99) 878 17 31
+                <a class="office_phone" href="tel: 67-227-00-37">
+                    67-227-00-37
                 </a>
             </div>
         </div>

@@ -34,14 +34,11 @@
                         <input type="text" name="name" placeholder="Исмингиз" required>
                         <input type="text" name="phone" placeholder="Телефон рақамингиз" required>
                     </div>
-                    <select name="location" required>
-                        <option>Мавзуни танланг</option>
-                        <option value="toshkent">Toshkent</option>
-                        <option value="samarqand">Samarqand</option>
-                        <option value="buxoro">Buxoro</option>
-                    </select>
+                    <div class="input__box">
+                        <input type="text" name="location" placeholder="Мавзу" required style="width: 100%">
+                    </div>
                     <textarea name="text" cols="30" rows="10" placeholder="Хабар матни" required></textarea>
-                    <button type="submit">Jo’natish</button>
+                    <button type="submit">Yuborish</button>
                     <div class="number-mail">
                         <div class="number-box">
                             <i class="fas fa-phone-alt"></i>

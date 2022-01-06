@@ -163,20 +163,17 @@
                 <div class="col-12 col-lg-8 form__parent">
                     <form action="{{ route('post-contact') }}" method="POST">
                         @csrf
-                        <h4>@lang('contact.brand')
+                        <h4>@lang('contact.contact_title')
                         </h4>
                         <div class="input__box">
                             <input type="text" name="name" placeholder="Исмингиз" required>
                             <input type="text" name="phone" placeholder="Телефон рақамингиз" required>
                         </div>
-                        <select name="location" required>
-                            <option value="1">Мавзуни танланг</option>
-                            <option value="2">1</option>
-                            <option value="3">2</option>
-                            <option value="4">3</option>
-                        </select>
+                        <div class="input__box">
+                            <input type="text" name="location" placeholder="Мавзу" required style="width: 100%">
+                        </div>
                         <textarea name="text" cols="30" rows="10" placeholder="Хабар матни" required></textarea>
-                        <button type="submit">Jo’natish</button>
+                        <button type="submit">Yuborish</button>
                         <div class="number-mail">
                             <div class="number-box">
                                 <i class="fas fa-phone-alt"></i>
@@ -194,7 +191,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                    </div>
                 <div class="col-lg-4 d-none d-md-block ">
                     <div class="form__img">
                         <img src="/images/contact_img.png" alt="">

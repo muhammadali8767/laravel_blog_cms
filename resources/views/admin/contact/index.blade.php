@@ -32,15 +32,17 @@
                                     ID
                                 </th>
                                 <th>
-                                    Название
+                                    Отправитель
                                 </th>
                                 <th>
-                                    Дата добавления
+                                    Дата получения заявки
                                 </th>
                                 <th>
-                                    Тип
+                                    Тема
                                 </th>
-                                <th style="width: 30%">
+                                <th>
+                                </th>
+                                <th>
                                 </th>
                             </tr>
                         </thead>
@@ -58,11 +60,15 @@
                                     </td>
 
                                     <td>
-                                        {{-- @if ($contact->type == 1)
-                                            Обычны
+                                        {{ $contact->location }}
+                                    </td>
+
+                                    <td>
+                                        @if ($contact->seen == 1)
+                                            Прочитано
                                         @else
-                                            С фото
-                                        @endif --}}
+                                            Не прочитано
+                                        @endif
                                     </td>
 
                                     <td class="project-actions text-right">

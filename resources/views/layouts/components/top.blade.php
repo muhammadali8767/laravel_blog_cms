@@ -1,48 +1,41 @@
 <div class="container ">
-    <div class="row header__logo__address align-items-center mb-2 mb-md-0">
-        <div class="col-6 col-md-4">
+    <div class="row header__logo__address align-items-center">
+        <div class="col-md-4 col-sm-12 col-xs-12">
             <a href="{{ route('main') }}">
                 <img src="/images/logo.png" alt="" class="logo">
                 СИРДАРЁ ЭРКИН ИКТИСОДИЙ ЗОНАСИ ДИРЕКЦИЯСИ
             </a>
         </div>
-        <div class="col-6 col-md-8">
-            <div class="row align-items-center header__logo__address-icon-lang">
-                <div class="col-12 col-md-4 col-lg-3">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-md-8 col-lg-9 col-sm-12">
+                    <div class="input-group top_search">
+                        <input type="text" class="form-control">
+                        <div class="input-group-append">
+                            <button class="btn search-button" type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 col-sm-12 align-right">
+                    <div class="dropdown top_lang">
+                        <button class="btn btn-block dropdown-toggle labg-button" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             @switch(app()->getLocale())
-                                @case('en')
-                                    English
-                                @break
-                                @case('ru')
-                                    Русский
-                                @break
-                                @case('uz')
-                                    Ўзбекча
-                                @break
-                                @default
-                                    Ўзбекча
-                                    @break
-                                @endswitch
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                @if (app()->getLocale() != 'uz')
-                                    <a class="dropdown-item" href="?locale=uz">Ўзбекча</a>
-                                @endif
-                                @if (app()->getLocale() != 'ru')
-                                    <a class="dropdown-item" href="?locale=ru">Русский</a>
-                                @endif
-                                @if (app()->getLocale() != 'en')
-                                    <a class="dropdown-item" href="?locale=en">English</a>
-                                @endif
-                            </div>
+                            @case('en') English @break
+                            @case('ru') Русский @break
+                            @default Ўзбекча @break
+                            @endswitch
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @if (app()->getLocale() != 'uz') <a class="dropdown-item" href="?locale=uz">Ўзбекча</a> @endif
+                            @if (app()->getLocale() != 'ru') <a class="dropdown-item" href="?locale=ru">Русский</a> @endif
+                            @if (app()->getLocale() != 'en') <a class="dropdown-item" href="?locale=en">English</a> @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
         <div class="row header__weather-money justify-content-end">
             <div class="col-12 col-md-9 col-lg-4 d-flex text-lg-right justify-content-end align-items-center">
                 {{-- <i class="fas fa-cloud-meatball weather-logo"></i> --}}
@@ -62,10 +55,10 @@
 
                     </button>
                     <div class="dropdown-menu money-dropdown-menu valyuta-list" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item valyuta" href="#" data-val="rub">Россия рубли</a>
-                        <a class="dropdown-item valyuta" href="#" data-val="usd">АҚШ доллари</a>
-                        <a class="dropdown-item valyuta" href="#" data-val="eur">EВРО</a>
-                        <a class="dropdown-item valyuta" href="#" data-val="cny">Хитой юани</a>
+                        <a class="dropdown-item valyuta" href="#" data-val="usd">USD</a>
+                        <a class="dropdown-item valyuta" href="#" data-val="eur">EUR</a>
+                        <a class="dropdown-item valyuta" href="#" data-val="rub">RUB</a>
+                        <a class="dropdown-item valyuta" href="#" data-val="cny">CNY</a>
                     </div>
                 </div>
                 {{-- <div class="purchase money-degree ml-2">
@@ -77,4 +70,4 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>

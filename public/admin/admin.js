@@ -83,3 +83,4 @@ function elFinderBrowser (callback, value, meta) {
     });
     }, false);
 })();
+
