@@ -1,25 +1,25 @@
 if (window.innerWidth > 992) {
-    $('.dropdown__parent').on('mouseover', function () {
+    $('.dropdown__parent').on('mouseover', function() {
         $(this).children().fadeIn("fast");
     });
-    $('.dropdown__parent').on('mouseleave', function () {
-        $(this).children().fadeOut();
-    })
-    // $('.dropdown .btn').on('mouseover', function(){
-    //     $(this).next().fadeIn("slow");
-    // })
-    // $('.dropdown .btn').on('mouseleave', function(){
-    //     $(this).next().fadeOut();
-    // })
+    $('.dropdown__parent').on('mouseleave', function() {
+            $(this).children().fadeOut();
+        })
+        // $('.dropdown .btn').on('mouseover', function(){
+        //     $(this).next().fadeIn("slow");
+        // })
+        // $('.dropdown .btn').on('mouseleave', function(){
+        //     $(this).next().fadeOut();
+        // })
 } else {
-    $('.dropdown__parent').on('click', function () {
+    $('.dropdown__parent').on('click', function() {
         $(this).children().fadeToggle();
     });
-    $('.dropdown .btn').on('click', function () {
+    $('.dropdown .btn').on('click', function() {
         $(this).next().fadeToggle();
     })
 }
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
     // document.querySelector('.dropdown__parent').addEventListener('mouseover', function () {
     //     document.querySelector('.dropdown__menu').classList.add('active');
     // });
@@ -32,32 +32,32 @@ window.addEventListener('load', function () {
     // document.querySelector('.dropdown__menu').addEventListener('mouseleave', function () {
     //     document.querySelector('.dropdown__menu').classList.remove('active');
     // });
-    document.querySelector('.menu__btn').addEventListener('click', function () {
+    document.querySelector('.menu__btn').addEventListener('click', function() {
         document.querySelector('.header__menu').classList.add('active')
     });
-    document.querySelector('.menu__close').addEventListener('click', function () {
-        document.querySelector('.header__menu').classList.remove('active')
-    })
-    // Language dropdown
-    // let btnClickLang = document.querySelector('.btn__lang');
-    // let btnClickWeather = document.querySelector('.weather-dropdown-btn');
-    // let btnClickMoney = document.querySelector('.money-btn');
-    // let langMenuList = document.querySelector('.lang-dropdown-menu');
-    // let weatherMenuList = document.querySelector('.weather-dropdown-menu');
-    // let moneyMenuList = document.querySelector('.money-dropdown-menu');
-    // btnClickLang.addEventListener('click',function(){
-    //     langMenuList.classList.toggle('active');
-    // });
-    // btnClickWeather.addEventListener('click',function(){
-    //     weatherMenuList.classList.toggle('active');
-    // });
-    // btnClickMoney.addEventListener('click',function(){
-    //     moneyMenuList.classList.toggle('active');
-    // });
+    document.querySelector('.menu__close').addEventListener('click', function() {
+            document.querySelector('.header__menu').classList.remove('active')
+        })
+        // Language dropdown
+        // let btnClickLang = document.querySelector('.btn__lang');
+        // let btnClickWeather = document.querySelector('.weather-dropdown-btn');
+        // let btnClickMoney = document.querySelector('.money-btn');
+        // let langMenuList = document.querySelector('.lang-dropdown-menu');
+        // let weatherMenuList = document.querySelector('.weather-dropdown-menu');
+        // let moneyMenuList = document.querySelector('.money-dropdown-menu');
+        // btnClickLang.addEventListener('click',function(){
+        //     langMenuList.classList.toggle('active');
+        // });
+        // btnClickWeather.addEventListener('click',function(){
+        //     weatherMenuList.classList.toggle('active');
+        // });
+        // btnClickMoney.addEventListener('click',function(){
+        //     moneyMenuList.classList.toggle('active');
+        // });
 })
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     // 1.OWL CAROUSEL Element
     $('.owl-carousel:nth-child(1)').owlCarousel({
         loop: true,
@@ -102,7 +102,7 @@ $(document).ready(function () {
         }
     });
     // FIXED-BTN Codes
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         var scroll = $(this).scrollTop();
         if (scroll > 300) {
             $('.scroll__top').fadeIn();
@@ -110,21 +110,21 @@ $(document).ready(function () {
             $('.scroll__top').fadeOut();
         }
     })
-    $('.scroll__top').click(function () {
-        $('html,body').animate({
-            scrollTop: 0,
-        }, 1000);
-    })
-    // ALL DROPDOWN MENU CODES
-    // $('.dropdown .btn').on('mouseleave', function(){
-    //     $(this).next().fadeOut();
-    // })
-    // $('.dropdown .btn').next().on('mousemove', function(){
-    //     $(this).fadeIn("fast");
-    // })
-    // $('.dropdown .btn').next().on('mouseleave', function(){
-    //     $(this).fadeOut();
-    // })
+    $('.scroll__top').click(function() {
+            $('html,body').animate({
+                scrollTop: 0,
+            }, 1000);
+        })
+        // ALL DROPDOWN MENU CODES
+        // $('.dropdown .btn').on('mouseleave', function(){
+        //     $(this).next().fadeOut();
+        // })
+        // $('.dropdown .btn').next().on('mousemove', function(){
+        //     $(this).fadeIn("fast");
+        // })
+        // $('.dropdown .btn').next().on('mouseleave', function(){
+        //     $(this).fadeOut();
+        // })
 })
 
 
@@ -155,28 +155,28 @@ fetch(url)
 // ------- Valyuta --------------------------------------------------------------------
 
 valyuta('usd');
-$('.valyuta').click(function(){ valyuta(this.dataset.val) });
+$('.valyuta').click(function() { valyuta(this.dataset.val) });
 
 function valyuta(key) {
     console.log(key);
     fetch("/valyuta.json")
-    .then(response => response.json())
-    .then(data => {
-        const valyutaShow = $('.valyuta-show');
-        const valyutaName = $('.valyuta-name');
+        .then(response => response.json())
+        .then(data => {
+            const valyutaShow = $('.valyuta-show');
+            const valyutaName = $('.valyuta-name');
 
-        // const valyutaList = $('.valyuta-list');
-        // const valyutaLogo = $('.valyuta-logo');
+            // const valyutaList = $('.valyuta-list');
+            // const valyutaLogo = $('.valyuta-logo');
 
-        valyutaName.html(data[key].Ccy);
-        valyutaShow.html(data[key].Rate + ' Сум');
-        // valyutaLogo.html(data[key].CcyNm_UZC);
+            valyutaName.html('1 ' + data[key].Ccy);
+            valyutaShow.html(data[key].Rate + ' Сум');
+            // valyutaLogo.html(data[key].CcyNm_UZC);
 
-        // console.log(data[key]);
-    })
-    .catch((e) => {
-        console.log(e);
-    });
+            // console.log(data[key]);
+        })
+        .catch((e) => {
+            console.log(e);
+        });
 
 }
 
@@ -186,4 +186,3 @@ $(document).ready(function() {
         $("#success-alert").slideUp(500);
     });
 });
-

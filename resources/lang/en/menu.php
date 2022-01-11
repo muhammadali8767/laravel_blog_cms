@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'logo' => 'FREE ECONOMİC ZONE "SYRDARYA"',
+    'search' => 'Search',
     'main' => 'Home',
     'about' => 'About us',
     'direction' => 'Syrdarya FEZ Directorate',

@@ -3,7 +3,7 @@
         <div class="col-md-4 col-sm-12 col-xs-12">
             <a href="{{ route('main') }}">
                 <img src="/images/logo.png" alt="" class="logo">
-                СИРДАРЁ ЭРКИН ИКТИСОДИЙ ЗОНАСИ ДИРЕКЦИЯСИ
+                @lang('menu.logo')
             </a>
         </div>
         <div class="col-md-8 col-sm-12 col-xs-12">
@@ -12,7 +12,7 @@
                     <div class="input-group top_search">
                         <input type="text" class="form-control">
                         <div class="input-group-append">
-                            <button class="btn search-button" type="button">Search</button>
+                            <button class="btn search-button" type="button">@lang('menu.search')</button>
                         </div>
                     </div>
                 </div>

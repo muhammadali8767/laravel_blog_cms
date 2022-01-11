@@ -42,9 +42,12 @@
             <div class="col-12 col-md-6 col-lg-4 my-2 ">
                 <div class="trinity__boxes">
                     <div class="trinity__boxes-text">
-                        <h5>Бизнесни қандай
-                            бошлаш лозим?</h5>
-                        <a href="#">
+{{--
+                            <a href="{{ route('page', 'sirdaryo-eizda-faoliyat-turlari') }}">@lang('menu.types of activities')</a>
+                            <a href="{{ route('page', 'muvofaqqiyatli-loiialar') }}">@lang('menu.successful projects')</a> --}}
+
+                        <h5>@lang('menu.start_business')</h5>
+                        <a href="{{ route('page', 'biznesni-qandai-boslaiman') }}">
                             <i class="fas fa-arrow-up"></i>
                         </a>
                     </div>
@@ -54,9 +57,8 @@
             <div class="col-12 col-md-6 col-lg-4 my-2">
                 <div class="trinity__boxes">
                     <div class="trinity__boxes-text">
-                        <h5>Бизнесни қандай
-                            бошлаш лозим?</h5>
-                        <a href="#">
+                        <h5>@lang('menu.why')</h5>
+                        <a href="{{ route('page', 'nima-ucun-sirdaryo-eiz') }}">
                             <i class="fas fa-arrow-up"></i>
                         </a>
                     </div>
@@ -66,9 +68,8 @@
             <div class="col-12 col-md-6 col-lg-4 my-2">
                 <div class="trinity__boxes">
                     <div class="trinity__boxes-text">
-                        <h5>Бизнесни қандай
-                            бошлаш лозим?</h5>
-                        <a href="#">
+                        <h5>@lang('menu.preferences')</h5>
+                        <a href="{{ route('page', 'imtiyoz-va-prefereciyalar') }}">
                             <i class="fas fa-arrow-up"></i>
                         </a>
                     </div>
