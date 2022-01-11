@@ -6,7 +6,7 @@
                 <div class="footer__logo">
                     <a href="index.html" class="footer__logo-img">
                         <img src="/images/logouzb.png" alt="png" class="logo">
-                        СИРДАРЁ ЭРКИН ИКТИСОДИЙ ЗОНАСИ ДИРЕКЦИЯСИ
+                        @lang('menu.logo')
                     </a>
                     <p><span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш ...</p>
 

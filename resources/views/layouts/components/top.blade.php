@@ -1,14 +1,14 @@
 <div class="container ">
     <div class="row header__logo__address align-items-center">
-        <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="col-md-6 col-sm-12 col-xs-12">
             <a href="{{ route('main') }}">
                 <img src="/images/logo.png" alt="" class="logo">
                 @lang('menu.logo')
             </a>
         </div>
-        <div class="col-md-8 col-sm-12 col-xs-12">
+        <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="row">
-                <div class="col-md-8 col-lg-9 col-sm-12">
+                <div class="col-md-7 col-lg-8 col-sm-12">
                     <div class="input-group top_search">
                         <input type="text" class="form-control">
                         <div class="input-group-append">
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-3 col-sm-12 align-right">
+                <div class="col-md-5 col-lg-4 col-sm-12 align-right">
                     <div class="dropdown top_lang">
                         <button class="btn btn-block dropdown-toggle labg-button" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
