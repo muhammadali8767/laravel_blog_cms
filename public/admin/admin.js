@@ -24,6 +24,10 @@ tinymce.init({
     plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
     toolbar_mode: 'floating',
     relative_urls : false,
+    image_dimensions: false,
+         image_class_list: [
+            {title: 'Responsive', value: 'img-responsive'}
+        ],
     file_picker_callback : elFinderBrowser
 });
 
