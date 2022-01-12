@@ -77,8 +77,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-7 col-md-5 mx-auto news-btns">
-                    <button class="news__btn">Янгиликлар</button>
-                    <button class="event__btn">Воқеалар</button>
+                    <form action="{{ route('news') }}">
+                        <button class="news__btn">@lang('contact.yangiliklar')</button>
+                    </form>
+                    <form action="{{ route('multimedia') }}">
+                        <button class="event__btn">@lang('contact.media')</button>
+                    </form>
                 </div>
             </div>
             <div class="row">
@@ -123,71 +127,13 @@
                 </div>
             </div>
             <div class="row news__line">
-                <a href="{{ route('news') }}">Кўпроқ кўриш</a>
+                <a href="{{ route('news') }}">@lang('contact.more')</a>
             </div>
         </div>
     </section>
     <!-- SECTION NEWS END -->
 
-    <!-- SECTION CONTACT FORM STARTING -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-8 form__parent">
-                    <form action="{{ route('post-contact') }}" method="POST">
-                        @csrf
-                        <h4>@lang('contact.contact_title')
-                        </h4>
-                        <div class="input__box">
-                            <input type="text" name="name" placeholder="Исмингиз" required>
-                            <input type="text" name="phone" placeholder="Телефон рақамингиз" required>
-                        </div>
-                        <div class="input__box">
-                            <input type="text" name="location" placeholder="Мавзу" required style="width: 100%">
-                        </div>
-                        <textarea name="text" cols="30" rows="10" placeholder="Хабар матни" required></textarea>
-                        <button type="submit">Yuborish</button>
-                        <div class="number-mail">
-                            <div class="number-box">
-                                <i class="fas fa-phone-alt"></i>
-                                <div>
-                                    <p>Биз билан боғланиш учун</p>
-                                    <h5>+998 99 878 17 31</h5>
-                                </div>
-                            </div>
-                            <div class="mail-box">
-                                <i class="far fa-envelope"></i>
-                                <div>
-                                    <p>Биз билан боғланиш учун</p>
-                                    <h5>+998 99 878 17 31</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-4 d-none d-md-block ">
-                    <div class="form__img">
-                        <img src="/images/contact_img.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SECTION CONTACT FORM END -->
-
-    <!-- SECTION MAP STARTING -->
-    <section id="map">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 maps__box">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.9216704383653!2d68.77543542382799!3d40.47699787062319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b2075214f36a35%3A0x92824d9a089e8042!2z0KHRi9GA0LTQsNGA0YzQuNC90YHQutC40Lkg0L7QsdC70LDRgdGC0L3QvtC5INGE0LjQu9C40LDQuyDQntCe0J4g4oCcSVQt0J_QsNGA0LrigJ0!5e0!3m2!1suz!2s!4v1636132822995!5m2!1suz!2s"
-                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SECTION MAP END -->
+    @include('layouts.components.contact_form')
 
     <!-- SECTION CLIENT STARTING -->
     <section id="client">

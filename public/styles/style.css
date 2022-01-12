@@ -695,7 +695,7 @@
         background-color: #fff;
     }
     
-    #news .news-btns {
+    #news .news-btns form {
         background-color: #F4F4F4;
         border-radius: 10px;
         padding: 7px;
@@ -704,7 +704,7 @@
         margin-bottom: 28px;
     }
     
-    #news .news-btns button {
+    #news .news-btns form button {
         width: 48%;
         padding: 15px 0;
         border-radius: 10px;
@@ -716,7 +716,7 @@
         transition: 0.6s;
     }
     
-    #news .news-btns button:hover {
+    #news .news-btns form button:hover {
         background-color: #2E8EDA;
         color: #fff;
     }
@@ -1872,7 +1872,11 @@
             border-radius: 5px;
             padding: 4px;
         }
-        #news .news-btns button {
+        #news .news-btns form {
+            display: inline-block;
+            width: 50%;
+        }
+        #news .news-btns form button {
             font-size: 14px;
             padding: 7px 0;
             border-radius: 5px;

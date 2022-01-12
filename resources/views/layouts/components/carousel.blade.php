@@ -2,21 +2,19 @@
     <div class="container">
         <div class="sliders owl-carousel">
             <div class="slide">
-                <h1>БИЗНEСИНГИЗНИ <br> САМАРАЛИ БОШҚАРИНГ</h1>
-                <p>Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона
-                    жамоамизга қўнғироқ қилинг.</p>
+                <h1>@lang('carousel.БИЗНEСИНГИЗНИ  <br> САМАРАЛИ БОШҚАРИНГ')</h1>
+                <p>@lang('carousel.Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона жамоамизга қўнғироқ қилинг.')</p>
                 <div class="slider__btns">
-                    <a class="more_info" href="{{ route('page', 'biznesni-qandai-boslaiman') }}">Батафсил</a>
-                    <a class="contact__btn" href="{{ route('contact') }}">Боғланиш</a>
+                    <a class="more_info" href="{{ route('page', 'biznesni-qandai-boslaiman') }}">@lang('carousel.Батафсил')</a>
+                    <a class="contact__btn" href="{{ route('contact') }}">@lang('carousel.Боғланиш')</a>
                 </div>
             </div>
             <div class="slide">
-                <h1>жамоамизга <br> қўнғироқ қилинг</h1>
-                <p>Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона
-                    жамоамизга қўнғироқ қилинг.</p>
+                <h1>@lang('carousel.жамоамизга <br> қўнғироқ қилинг')</h1>
+                <p>@lang('carousel.Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона жамоамизга қўнғироқ қилинг.')</p>
                 <div class="slider__btns">
-                    <a class="more_info" href="{{ route('page', 'biznesni-qandai-boslaiman') }}">Батафсил</a>
-                    <a class="contact__btn" href="{{ route('contact') }}">Боғланиш</a>
+                    <a class="more_info" href="{{ route('page', 'biznesni-qandai-boslaiman') }}">@lang('carousel.Батафсил')</a>
+                    <a class="contact__btn" href="{{ route('contact') }}">@lang('carousel.Боғланиш')</a>
                 </div>
             </div>
         </div>
@@ -29,12 +27,11 @@
         <div class="row d-flex align-items-center mb-2 mb-md-5">
             <div class="col-6">
                 <ul class="afzallik">
-                    <li>БИЗНИНГ АФЗАЛЛИКЛАРИМИЗ ҚУЙИДАГИЧА</li>
+                    <li>@lang('carousel.БИЗНИНГ АФЗАЛЛИКЛАРИМИЗ ҚУЙИДАГИЧА')</li>
                 </ul>
             </div>
             <div class="col-6">
-                <p class="dostona">Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи бўлсангиз,
-                    дўстона жамоамизга қўнғироқ қилинг.</p>
+                <p class="dostona">@lang('carousel.Бизнесингизни қандай қўллаб-қувватлашимиз ҳақида кўпроқ билмоқчи <br> бўлсангиз, дўстона жамоамизга қўнғироқ қилинг.')</p>
             </div>
         </div>
 

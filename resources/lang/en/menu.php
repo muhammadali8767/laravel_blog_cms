@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'logo' => 'SIRDARYO FREE ECONOMIC ZONE DIRECTORATE',
+    'logo' => 'SIRDARYO FREE ECONOMIC ZONE <br>DIRECTORATE',
     'search' => 'Search',
     'main' => 'Home',
     'about' => 'About us',
