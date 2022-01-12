@@ -1,7 +1,7 @@
 <h5 class="news__inner-title">@lang('sidebar.Иш вақти')</h5>
 <div class="job__time">
     <i class="far fa-clock"></i>
-    @lang('sidebar.Ду - Ша') 08:00 - 19:00
+    @lang('sidebar.Ду - Ша') 08:00 - 18:00
 </div>
 <div class="job__time">
     <i class="fas fa-mug-hot"></i>
