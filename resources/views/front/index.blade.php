@@ -77,12 +77,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-7 col-md-5 mx-auto news-btns">
-                    <form action="{{ route('news') }}">
+                    {{-- <form action="{{ route('news') }}"> --}}
                         <button class="news__btn">@lang('contact.yangiliklar')</button>
-                    </form>
-                    <form action="{{ route('multimedia') }}">
+                    {{-- </form> --}}
+                    {{-- <form action="{{ route('multimedia') }}"> --}}
                         <button class="event__btn">@lang('contact.media')</button>
-                    </form>
+                    {{-- </form> --}}
                 </div>
             </div>
             <div class="row">
