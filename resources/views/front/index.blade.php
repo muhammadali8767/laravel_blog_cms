@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row d-flex align-items-center justify-content-between pb-60">
                 <div class="col-12 col-md-6 p-3 p-md-0 about__col">
-                    <img class="img-fluid" style="min-height: 500px; object-fit: cover; object-position: 0 0;"
+                    <img class="img-fluid" style="min-height: 350px; object-fit: cover; object-position: 0 0;"
                         src="{{ $about->image }}">
                 </div>
                 <div class="col-12 col-md-6  pl-md-4 about__col">

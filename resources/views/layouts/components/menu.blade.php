@@ -16,10 +16,10 @@
                                 <a href="{{ route('page', 'sirdaryo-eiz-direkciyasi') }}">@lang('menu.direction') </a>
                             </li>
                             <li>
-                                <a href="{{ route('page', 'sirdaryo-eiz-mamurii-kengasi') }}">@lang('menu.functions')</a>
+                                <a href="{{ route('page', 'sirdaryo-eizning-vazifalari') }}">@lang('menu.functions')</a>
                             </li>
                             <li>
-                                <a href="{{ route('page', 'sirdaryo-eizning-vazifalari') }}">@lang('menu.council') </a>
+                                <a href="{{ route('page', 'sirdaryo-eiz-mamurii-kengasi') }}">@lang('menu.council') </a>
                             </li>
 
                         </ul>

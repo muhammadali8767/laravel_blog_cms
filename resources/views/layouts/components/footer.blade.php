@@ -8,9 +8,9 @@
                         <img src="/images/logouzb.png" alt="png" class="logo">
                         @lang('menu.logo')
                     </a>
-                    <p><span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш ...</p>
+                    <p>@lang('footer.<span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш ...')</p>
 
-                    <a href="{{ route('about') }}" class="more">Батафсил... </a>
+                    <a href="{{ route('about') }}" class="more">@lang('footer.Батафсил...')</a>
 
                 </div>
             </div>
