@@ -98,7 +98,7 @@
                         <a href="{{ route('contact') }}">@lang('footer.ҚАЙТА АЛОҚА')</a>
                     </li>
                 </ul>
-                <p>@lang('footer.start-end', ['start' => 2010, 'end' => date('Y')])</p>
+                <p>@lang('footer.start-end', ['start' => 2018, 'end' => date('Y')])</p>
             </div>
             <div class="col-12 col-md-4 ">
                 {{-- <ul class="row  justify-content-lg-end social">

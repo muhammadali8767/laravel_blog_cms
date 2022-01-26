@@ -21,7 +21,8 @@
                                 <i class="fas fa-phone-alt"></i>
                                 <div>
                                     <p>@lang('contact.Биз билан боғланиш учун')</p>
-                                    <h5>+998 (67) 227 00 37</h5>
+                                    <h5>+998 67 227 00 37</h5>
+                                    <h5>+998 97 755-74-73</h5>
                                 </div>
                             </div>
                             <div class="mail-box">

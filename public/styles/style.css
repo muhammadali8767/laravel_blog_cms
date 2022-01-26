@@ -2249,4 +2249,15 @@
             padding-bottom: 30px !important;
         }
     }
+
+    .valyuta-text {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 7px;
+        padding: 11px 8px;
+        color: #2E8EDA;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
     /*# sourceMappingURL=style.css.map */

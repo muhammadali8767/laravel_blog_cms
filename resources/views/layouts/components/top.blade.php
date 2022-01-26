@@ -49,7 +49,7 @@
 
                     </div> --}}
                 </div>
-                <div class="dropdown ml-5">
+                <div class="dropdown ml-3">
                     <button class="btn money-btn dropdown-toggle valyuta-name" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
@@ -61,12 +61,8 @@
                         <a class="dropdown-item valyuta" href="#" data-val="cny">CNY</a>
                     </div>
                 </div>
-                {{-- <div class="purchase money-degree ml-2">
-
-                    <h5 class="valyuta-logo"></h5>
-                </div> --}}
-                <div class="sell money-degree ml-2">
-                    <h5 class="valyuta-show"></h5>
+                <div class="sell money-degree">
+                    <span class="valyuta-show valyuta-text"></span><span class="valyuta-text">@lang("menu.Сум")</span>
                 </div>
             </div>
         </div>

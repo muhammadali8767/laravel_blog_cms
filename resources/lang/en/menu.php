@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'logo' => '«DIRECTORATE OF FREE ECONOMIC ZONE «SIRDARYA»» STATE UNITARY ENTERPRISE',
+    'Сум' => 'Sum',
+    'logo' => '«DIRECTORATE OF FREE ECONOMIC ZONE «SIRDARYA»» STATE UNITARY COMPANY',
     'search' => 'Search',
     'main' => 'Home',
     'about' => 'About us',

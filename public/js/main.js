@@ -169,7 +169,7 @@ function valyuta(key) {
             // const valyutaLogo = $('.valyuta-logo');
 
             valyutaName.html('1 ' + data[key].Ccy);
-            valyutaShow.html(data[key].Rate + ' Сум');
+            valyutaShow.html(data[key].Rate + ' ');
             // valyutaLogo.html(data[key].CcyNm_UZC);
 
             // console.log(data[key]);

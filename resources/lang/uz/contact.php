@@ -14,7 +14,8 @@ return [
         <li>И.Каримов кўчаси 104 уй.</li>',
     'kontaktlar' =>
         '<li class="name">Контактлар</li>
-        <li>+998 (67) 227 00 37</li>
+        <li>+998 67 227 00 37</li>
+        <li>+998 97 755-74-73</li>
         <li>fezsirdarya@gmail.com</li>',
     'Биз билан боғланиш учун' => 'Биз билан боғланиш учун',
     'yuborish' => 'Yuborish',
