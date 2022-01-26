@@ -158,8 +158,7 @@ valyuta('usd');
 $('.valyuta').click(function() { valyuta(this.dataset.val) });
 
 function valyuta(key) {
-    console.log(key);
-    fetch("/valyuta.json")
+    fetch("valyuta.json")
         .then(response => response.json())
         .then(data => {
             const valyutaShow = $('.valyuta-show');
@@ -177,7 +176,6 @@ function valyuta(key) {
         .catch((e) => {
             console.log(e);
         });
-
 }
 
 // close alert
