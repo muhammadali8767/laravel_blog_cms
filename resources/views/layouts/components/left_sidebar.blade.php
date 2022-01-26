@@ -46,28 +46,42 @@
             <a href="http://president.uz/">
                 <img src="/images/gerb.png">
                 <span>
-                    Ўзбекистон Республикаси Президентининг расмий веб-сайти</span>
+                    @lang('sidebar.Ўзбекистон Республикаси Президентининг расмий веб-сайти')</span>
             </a>
         </li>
         <li>
-            <a href="http://www.gov.uz">
-                <img src="/images/gov.png">
+            <a href="http://gov.uz/">
+                <img src="/images/gerb.png">
                 <span>
-                    O`zbekiston Respublikasi hukumat portali</span>
+                    @lang('sidebar.Ўзбекистон Республикаси Ҳукумат портали')</span>
             </a>
         </li>
         <li>
-            <a href="http://www.press-service.uz">
-                <img src="/images/press-service.png">
+            <a href="http://www.minjust.uz/uz">
+                <img src="/images/minjust.png">
                 <span>
-                    O`zbekiston Respublikasi Prezidentining matbuot xizmati</span>
+                    @lang('sidebar.Ўзбекистон Республикаси Адлия вазирлиги')</span>
             </a>
         </li>
         <li>
-            <a href="http://my.gov.uz">
+            <a href="https://mineconomy.uz/">
                 <img src="/images/my-gov.png">
                 <span>
-                    Yagona interaktiv davlat xizmatlari portali</span>
+                    @lang('sidebar.Ўзбекистон Республикаси Иқтисодиёт Вазирлиги')</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://mift.uz/">
+                <img src="/images/gerb1.png">
+                <span>
+                    @lang('sidebar.Ўзбекистон Республикаси Ташқи савдо вазирлиги')</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://soliq.uz/uz">
+                <img src="/images/gerb1.png">
+                <span>
+                    @lang('sidebar.Ўзбекистон Республикаси Давлат солиқ қўмитаси')</span>
             </a>
         </li>
     </ul>

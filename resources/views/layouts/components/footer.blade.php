@@ -8,9 +8,9 @@
                         <img src="/images/logouzb.png" alt="png" class="logo">
                         @lang('menu.logo')
                     </a>
-                    <p><span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш ...</p>
+                    <p>@lang('footer.<span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш ...')</p>
 
-                    <a href="{{ route('about') }}" class="more">Батафсил... </a>
+                    <a href="{{ route('about') }}" class="more">@lang('footer.Батафсил...')</a>
 
                 </div>
             </div>
@@ -98,7 +98,7 @@
                         <a href="{{ route('contact') }}">@lang('footer.ҚАЙТА АЛОҚА')</a>
                     </li>
                 </ul>
-                <p>@lang('footer.start-end', ['start' => 2010, 'end' => date('Y')])</p>
+                <p>@lang('footer.start-end', ['start' => 2018, 'end' => date('Y')])</p>
             </div>
             <div class="col-12 col-md-4 ">
                 {{-- <ul class="row  justify-content-lg-end social">

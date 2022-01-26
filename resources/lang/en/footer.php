@@ -1,6 +1,8 @@
 <?php
 
 return [
+    '<span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш ...' => '<span>Free economic zone</span> - accelerated socio-economic development of the region ...',
+    'Батафсил...' => 'Read more ...',
     'БИЗ ХАҚИМИЗДА' => 'About us',
     '«Сирдарё» ЭИЗда Бизнес' => 'Business in Syrdarya FEZ',
     'Мултимедиа' => 'Multimedia',

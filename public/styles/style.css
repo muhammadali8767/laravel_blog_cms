@@ -1876,7 +1876,11 @@
             border-radius: 5px;
             padding: 4px;
         }
-        #news .news-btns button {
+        #news .news-btns form {
+            display: inline-block;
+            width: 50%;
+        }
+        #news .news-btns form button {
             font-size: 14px;
             padding: 7px 0;
             border-radius: 5px;
@@ -2244,5 +2248,16 @@
             padding-top: 270px !important;
             padding-bottom: 30px !important;
         }
+    }
+
+    .valyuta-text {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 7px;
+        padding: 11px 8px;
+        color: #2E8EDA;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
     }
     /*# sourceMappingURL=style.css.map */

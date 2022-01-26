@@ -16,10 +16,10 @@
                                 <a href="{{ route('page', 'sirdaryo-eiz-direkciyasi') }}">@lang('menu.direction') </a>
                             </li>
                             <li>
-                                <a href="{{ route('page', 'sirdaryo-eiz-mamurii-kengasi') }}">@lang('menu.functions')</a>
+                                <a href="{{ route('page', 'sirdaryo-eizning-vazifalari') }}">@lang('menu.functions')</a>
                             </li>
                             <li>
-                                <a href="{{ route('page', 'sirdaryo-eizning-vazifalari') }}">@lang('menu.council') </a>
+                                <a href="{{ route('page', 'sirdaryo-eiz-mamurii-kengasi') }}">@lang('menu.council') </a>
                             </li>
 
                         </ul>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-7 col-lg-3 d-flex justify-content-end">
                 <a class="office_phone" href="tel: +998998781731">
-                    +998 (67) 227 00 37
+                    +998 67 227 00 37
                 </a>
             </div>
         </div>
