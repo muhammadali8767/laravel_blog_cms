@@ -96,19 +96,6 @@ class FrontController extends Controller
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     // public function project()
     // {
     //     return view('front.project');

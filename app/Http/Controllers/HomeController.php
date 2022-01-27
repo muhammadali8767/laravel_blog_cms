@@ -51,8 +51,9 @@ class HomeController extends Controller
     public function category($category_slug)
     {
         $posts = app(PostRepository::class)->getAllWithCategory($category_slug, 5);
-
-        return view('home.category', compact('posts'));
+        
+        return view('front.news', compact('posts'));
+        // return view('home.category', compact('posts'));
     }
     public function category_post($category_slug, $slug)
     {

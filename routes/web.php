@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Services\Localization\LocalizationService;
-use Spatie\Permission\Contracts\Role;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,26 +44,27 @@ Route::namespace('App\Http\Controllers')
     ->group(function () {
         Route::get('', 'FrontController@index')->name('main');
 
-        Route::get('about', 'FrontController@about')->name('about');
-        Route::get('territory', 'FrontController@territory')->name('territory');
-        Route::get('eiz_vazifasi', 'FrontController@eiz_vazifasi')->name('eiz-vazifasi');
-        Route::get('sirdaryo_eiz_mk', 'FrontController@sirdaryo_eiz_mk')->name('sirdaryo-eiz-mk');
+        // Route::get('about', 'FrontController@about')->name('about');
+        // Route::get('territory', 'FrontController@territory')->name('territory');
+        // Route::get('eiz_vazifasi', 'FrontController@eiz_vazifasi')->name('eiz-vazifasi');
+        // Route::get('sirdaryo_eiz_mk', 'FrontController@sirdaryo_eiz_mk')->name('sirdaryo-eiz-mk');
 
-        Route::get('bussiness', 'FrontController@bussiness')->name('bussiness');
-        Route::get('why', 'FrontController@why')->name('why');
-        Route::get('privilege', 'FrontController@privilege')->name('privilege');
-        Route::get('activity_types', 'FrontController@activity_types')->name('activity_types');
-        Route::get('project', 'FrontController@project')->name('project');
+        // Route::get('bussiness', 'FrontController@bussiness')->name('bussiness');
+        // Route::get('why', 'FrontController@why')->name('why');
+        // Route::get('privilege', 'FrontController@privilege')->name('privilege');
+        // Route::get('activity_types', 'FrontController@activity_types')->name('activity_types');
+        // Route::get('project', 'FrontController@project')->name('project');
 
         Route::get('news', 'FrontController@news')->name('news');
         Route::get('multimedia', 'FrontController@multimedia')->name('multimedia');
         Route::get('contact', 'FrontController@contact')->name('contact');
+
         Route::post('contact', 'FrontController@post_contact')->name('post-contact');
 
-        Route::get('home', 'HomeController@index')->name('home');
+        // Route::get('home', 'HomeController@index')->name('home');
         Route::get('page/{slug}', 'HomeController@page')->name('page');
         Route::get('/{slug}', 'HomeController@category')->name('category');
-        // Route::get('post/{slug}', 'HomeController@post')->name('post'); // route('post', $post->slug)
+        Route::get('post/{slug}', 'HomeController@post')->name('post'); // route('post', $post->slug)
         Route::get('/{category}/{slug}', 'HomeController@category_post')->name('category_post'); // route('category_post', [$post->category->slug, $post->slug])
     }
 );

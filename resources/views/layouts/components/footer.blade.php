@@ -10,7 +10,7 @@
                     </a>
                     <p>@lang('footer.<span>Эркин иқтисодий зона</span> — минтақани жадал ижтимоий-иқтисодий ривожлантириш ...')</p>
 
-                    <a href="{{ route('about') }}" class="more">@lang('footer.Батафсил...')</a>
+                    <a href="{{ route('page', 'biz-haqimizda') }}" class="more">@lang('footer.Батафсил...')</a>
 
                 </div>
             </div>
@@ -89,7 +89,8 @@
                 <ul class="row ">
 
                     <li>
-                        <a href="{{ route('about') }}">@lang('footer.САЙТ ҲАҚИДА')</a>
+                        {{-- http://fezsirdaryo.test/uz/page/biz-haqimizda --}}
+                        <a href="{{ route('page', 'biz-haqimizda') }}">@lang('footer.САЙТ ҲАҚИДА')</a>
                     </li>
                     <li>
                         <a href="#!">@lang('footer.САЙТ ХАРИТАСИ')</a>

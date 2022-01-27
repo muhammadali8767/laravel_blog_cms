@@ -19,8 +19,16 @@ class ValyutaMiddleware
         $valyuta['eur'] = $valyutaArray[1];
         $valyuta['rub'] = $valyutaArray[2];
         $valyuta['cny'] = $valyutaArray[14];
-        file_put_contents(str_replace('app\Http\Middleware', 'public\valyuta.json', __DIR__), json_encode($valyuta));
-        // dd(file_get_contents(str_replace('app\Http\Middleware', 'public\valyuta.json', __DIR__)));
+
+        $route = str_replace('app/Http/Middleware', 'public/valyuta.json', __DIR__);
+        $route2 = str_replace('app/Http/Middleware', 'valyuta.json', __DIR__);
+        if (strpos($route, 'Middleware') !== false) {
+            $route = str_replace('app\Http\Middleware', 'public\valyuta.json', __DIR__);
+            $route2 = str_replace('app\Http\Middleware', 'valyuta.json', __DIR__);
+        }
+
+        file_put_contents($route, json_encode($valyuta));
+        file_put_contents($route2, json_encode($valyuta));
         return $next($request);
     }
 }

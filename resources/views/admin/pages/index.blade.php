@@ -79,14 +79,16 @@
                                         <a class="btn btn-info btn-sm" href="{{ route('pages.edit', $page->id) }}">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('pages.destroy', $page->id) }}" method="POST"
-                                            style="display: inline-block">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm delete-btn">
-                                                <i class="fas fa-trash"></i>
-                                            </button>
-                                        </form>
+                                        @if ($page->id > 9)
+                                            <form action="{{ route('pages.destroy', $page->id) }}" method="POST"
+                                                style="display: inline-block">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm delete-btn">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>                                            
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach

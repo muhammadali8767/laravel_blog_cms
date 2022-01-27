@@ -158,7 +158,25 @@ valyuta('usd');
 $('.valyuta').click(function() { valyuta(this.dataset.val) });
 
 function valyuta(key) {
-    fetch("valyuta.json")
+    // var file = "/home/yuldash1/public_html/public/valyuta.json";
+    // var local_file = "C:/laragon/www/fezsirdaryo/public/valyuta.json";
+
+    // $.ajax({
+    //     url:file,
+    //     type:'HEAD',
+    //     error: function()
+    //     {
+    //         file = local_file
+    //     },
+    //     success: function()
+    //     {
+    //         //file exists
+    //     }
+    // });
+
+    // console.log(file)
+    // console.log(local_file)
+    fetch("/valyuta.json")
         .then(response => response.json())
         .then(data => {
             const valyutaShow = $('.valyuta-show');
@@ -171,7 +189,7 @@ function valyuta(key) {
             valyutaShow.html(data[key].Rate + ' ');
             // valyutaLogo.html(data[key].CcyNm_UZC);
 
-            // console.log(data[key]);
+            // console.log(data);
         })
         .catch((e) => {
             console.log(e);
